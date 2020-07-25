@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/jkwak09/cautious-guacamole/issues"
   },
-  "homepage": "https://github.com/jkwak09/cautious-guacamole#readme"
+  "homepage": "https://github.com/jkwak09/cautious-guacamole#readme",
+  "dependencies": {
+    "gatsby": "^2.24.10",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
 }
