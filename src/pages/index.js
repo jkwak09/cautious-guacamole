@@ -6,8 +6,9 @@ function Home() {
   return (
     <Layout>
       <Header />
-      <div style={{ color: `purple`, fontSize: `72px` }}>
-        Hello Gatsby!
+      <div>
+        <h1>Home Page</h1>
+        <p>This will become the home page.</p>
       </div>
     </Layout>
     )
