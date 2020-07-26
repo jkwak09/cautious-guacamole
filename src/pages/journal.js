@@ -6,7 +6,10 @@ function Journal () {
   return(
     <Layout>
       <Header />
-      <div>placeholder</div>
+      <div>
+        <h1>Journal Page</h1>
+        <p>This will display blog posts.</p>
+      </div>
     </Layout>
   )
 };
