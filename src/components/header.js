@@ -10,12 +10,13 @@ const ListLink = props => (
 function Header() {
   return (
     <div>
-      <header style={{ marginBottom: `1.5rem` }}>
+      <header>
         <Link to="/">
         <h3 style={{ display: `inline` }}>Site Title</h3>
         </Link>
         <ul style={{ listStyle: `none`, float: `right` }}>
           <ListLink to="/">Home</ListLink>
+          <ListLink to="/journal/">Journal</ListLink>
           <ListLink to="/about/">About</ListLink>
         </ul>
       </header>
