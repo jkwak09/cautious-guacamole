@@ -18,6 +18,8 @@
   "homepage": "https://github.com/jkwak09/cautious-guacamole#readme",
   "dependencies": {
     "gatsby": "^2.24.10",
+    "gatsby-source-filesystem": "^2.3.23",
+    "gatsby-transformer-remark": "^2.8.27",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
