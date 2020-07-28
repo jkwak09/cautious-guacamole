@@ -15,7 +15,7 @@ function Journal ({ data }) {
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
-            <Link to={node.fields.slug}>
+            <Link to={`/journal${node.fields.slug}`}>
               <h3>
                 {node.frontmatter.title}{" "}
                 <span>
