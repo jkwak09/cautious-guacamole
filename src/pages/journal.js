@@ -24,6 +24,7 @@ function Journal ({ data }) {
               </h3>
               <p>{node.excerpt}</p>
             </Link>
+            <p>{node.frontmatter.tags}</p>
           </div>
         ))}
       </div>
@@ -43,6 +44,7 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
+            tags
           }
           fields {
             slug
