@@ -1,13 +1,17 @@
 backend:
-  name: test-repo
+  name: github
+  repo: jkwak09/cautious-guacamole
+  branch: master
+  api_root: https://api.github.com
+  site_domain: cms.netlify.com
 
 media_folder: static/assets
 public_folder: /assets
 
 collections:
-  - name: blog
+  - name: post
     label: Blog
-    folder: content
+    folder: 'content'
     create: true
     fields:
       - { name: path, label: Path }
