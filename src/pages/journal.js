@@ -16,6 +16,7 @@ function Journal ({ data }) {
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <Link to={`/journal${node.fields.slug}`}>
+              <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} />
               <h3>
                 {node.frontmatter.title}{" "}
                 <span>
@@ -24,6 +25,9 @@ function Journal ({ data }) {
               </h3>
               <p>{node.excerpt}</p>
             </Link>
+            {/*
+            Note to self: Check structure of tags
+            */}
             <p>{node.frontmatter.tags}</p>
           </div>
         ))}
@@ -45,6 +49,8 @@ export const query = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             tags
+            thumbnail
+            altText
           }
           fields {
             slug
