@@ -17,5 +17,11 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
   ],
 }
