@@ -1,14 +1,12 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Header from "../components/header";
 import Layout from "../components/layout";
 
 export default function MyFiles({ data }) {
   // console.log(data)
   return (
     <Layout>
-      <Header />
-      <div>
+      <>
         <h1>My Site's Files</h1>
         <table>
           <thead>
@@ -30,7 +28,7 @@ export default function MyFiles({ data }) {
             ))}
           </tbody>
         </table>
-      </div>
+      </>
     </Layout>
   )
 }

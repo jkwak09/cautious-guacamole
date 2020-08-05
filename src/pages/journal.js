@@ -1,14 +1,12 @@
 import React from "react";
 import Layout from "../components/layout";
-import Header from "../components/header";
 import { Link, graphql } from "gatsby";
 
 function Journal ({ data }) {
   // console.log(data);
   return(
     <Layout>
-      <Header />
-      <div>
+      <>
         <h1>
         Blog posts
         </h1>
@@ -31,7 +29,7 @@ function Journal ({ data }) {
             <p>{node.frontmatter.tags}</p>
           </div>
         ))}
-      </div>
+      </>
     </Layout>
   )
 };
