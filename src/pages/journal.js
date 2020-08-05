@@ -4,7 +4,7 @@ import Header from "../components/header";
 import { Link, graphql } from "gatsby";
 
 function Journal ({ data }) {
-  console.log(data);
+  // console.log(data);
   return(
     <Layout>
       <Header />
