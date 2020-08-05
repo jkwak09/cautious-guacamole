@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
+import Helmet from "react-helmet";
 import { Link, graphql } from "gatsby";
 
 function Journal ({ data }) {
@@ -7,6 +8,7 @@ function Journal ({ data }) {
   return(
     <Layout>
       <>
+        <Helmet title={`Journal | ${data.site.siteMetadata.title}`}/>
         <h1>
         Blog posts
         </h1>
@@ -38,6 +40,11 @@ export default Journal;
 
 export const query = graphql`
   query {
+    site {
+      siteMetadata {
+        title
+      }
+    },
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       totalCount
       edges {
