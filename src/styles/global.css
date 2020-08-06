@@ -1,3 +1,24 @@
 html {
   background-color: #fefdf8;
 }
+
+/* LINKS */
+a:link {
+  color: #4d9a00;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #4d9a00;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #408000;
+  text-decoration: none;
+}
+
+a:active {
+  color: #4d9a00;
+  text-decoration: none;
+}
