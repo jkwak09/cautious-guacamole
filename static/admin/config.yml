@@ -17,6 +17,7 @@ collections:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
+      - { name: posttype, label: Post Type, widget: select, options: ["blog", "project"] }
       - { name: thumbnail, label: "Featured Image", widget: "image" }
       - { name: altText, label: "Featured Image Description", widget: "string" }
       - { name: tags, label: Tags, widget: list }
