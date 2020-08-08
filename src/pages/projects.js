@@ -14,22 +14,23 @@ function Projects ({ data }) {
         </h1>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link to={`/projects${node.fields.slug}`}>
-              <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} />
-              <h3>
-                {node.frontmatter.title}{" "}
-                <span>
-                  — {node.frontmatter.date}
-                </span>
-              </h3>
-              <p>{node.excerpt}</p>
-            </Link>
-            {/*
-            Note to self: Check structure of tags
-            */}
-            <p>{node.frontmatter.tags}</p>
-          </div>
+            <div key={node.id}>
+              <Link to={`/projects${node.fields.slug}`}>
+                <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} />
+                <h3>
+                  {node.frontmatter.title}{" "}
+                  <span>
+                    — {node.frontmatter.date}
+                  </span>
+                </h3>
+                <p>{node.excerpt}</p>
+              </Link>
+                {/*
+                Note to self: Check structure of tags
+                */}
+              <p>{node.frontmatter.tags}</p>
+            </div>
+
         ))}
       </>
     </Layout>
@@ -45,7 +46,10 @@ export const query = graphql`
         title
       }
     },
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC },
+      filter: {fileAbsolutePath: {regex: "\/projects/"}}
+      ) {
       totalCount
       edges {
         node {
@@ -56,6 +60,7 @@ export const query = graphql`
             tags
             thumbnail
             altText
+            posttype
           }
           fields {
             slug
