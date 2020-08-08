@@ -45,7 +45,10 @@ export const query = graphql`
         title
       }
     },
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC },
+      filter: {fileAbsolutePath: {regex: "\/blogs/"}}
+      ) {
       totalCount
       edges {
         node {
@@ -65,4 +68,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
