@@ -25,11 +25,17 @@ function Header() {
         <Link to="/">
         <h3 style={{ display: `inline` }}>{data.site.siteMetadata.title}</h3>
         </Link>
-        <ul style={{ listStyle: `none`, float: `right` }}>
-          <ListLink to="/">Home</ListLink>
-          <ListLink to="/journal/">Journal</ListLink>
-          <ListLink to="/about/">About</ListLink>
-        </ul>
+          <ul style={{ listStyle: `none`, float: `right` }}>
+            <ListLink to="/">Home</ListLink>
+            <ListLink to="/journal/">Journal</ListLink>
+            <ListLink to="/projects/">Projects</ListLink>
+            <ListLink to="/about/">About</ListLink>
+          </ul>
+        {/* <nav>
+          <Link to="/">Home</Link>
+          <Link to="/journal/">Journal</Link>
+          <Link to="/about/">About</Link>
+        </nav> */}
       </header>
     </div>
   )
