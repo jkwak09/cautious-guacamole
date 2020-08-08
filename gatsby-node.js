@@ -24,6 +24,9 @@ exports.createPages = async ({ graphql, actions }) => {
             fields {
               slug
             }
+            frontmatter {
+              posttype
+            }
           }
         }
       }
@@ -31,12 +34,31 @@ exports.createPages = async ({ graphql, actions }) => {
   `);
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: `/journal${node.fields.slug}`,
-      component: path.resolve(`./src/templates/blog-post.js`),
-      context: {
-        slug: node.fields.slug,
-      },
-    })
+    // createPage({
+    //   path: `/journal${node.fields.slug}`,
+    //   component: path.resolve(`./src/templates/blog-post.js`),
+    //   context: {
+    //     slug: node.fields.slug,
+    //   },
+    // })
+    if (node.frontmatter.posttype === "project") {
+      createPage({
+        path: `/projects${node.fields.slug}`,
+        component: path.resolve(`./src/templates/project-post.js`),
+        context: {
+          slug: node.fields.slug,
+        }
+      });
+    } else {
+      createPage({
+        path: `/journal${node.fields.slug}`,
+        component: path.resolve(`./src/templates/blog-post.js`),
+        context: {
+          slug: node.fields.slug,
+        }
+      });
+    };
   })
 };
+
+
