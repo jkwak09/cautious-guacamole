@@ -2,6 +2,7 @@
 path: test-post
 date: 2020-08-01T13:53:09.689Z
 title: Test Post
+posttype: blog
 tags:
   - food
   - drink
