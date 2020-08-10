@@ -28,7 +28,7 @@ a:active {
 }
 
 /*
-* MEDIA QUERIES
+* MEDIA BREAKPOINTS
 */
 
 .example {
@@ -36,27 +36,84 @@ a:active {
   color: white;
 }
 
+.header-container{
+  margin: 2rem auto;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .example {background: red;}
+
+  .layout-container{
+    border: 5px solid red;
+    padding: 0 1.5rem;
+  }
+
+  .header-container{
+    border: 5px solid red;
+  }
+
+  ul.nav-list{
+    listStyle: none;
+  }
+
+  nav.nav-container{
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .example {background: green;}
+
+  .layout-container{
+    border: 5px solid green;
+    padding: 0 2rem;
+  }
+
+  .header-container{
+    border: 5px solid green;
+  }
+
+  ul.nav-list{
+    float: right
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .example {background: blue;}
+
+  .layout-container{
+    border: 5px solid blue;
+  }
+
+  .header-container{
+    border: 5px solid blue;
+  }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .example {background: orange;}
+
+  .layout-container{
+    border: 5px solid orange;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .example {background: pink;}
+
+  .layout-container{
+    border: 5px solid pink;
+    padding: 0 3rem;
+  }
+
+  .header-container{
+    border: 5px solid pink;
+  }
 }
