@@ -1,5 +1,7 @@
 import React from "react";
 import { useStaticQuery, Link, graphql } from "gatsby";
+import Menu from "./menu";
+
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, marginRight: `1rem` }}>
@@ -20,24 +22,22 @@ function Header() {
     `
   )
   return (
-    <div>
-      <header>
-        <Link to="/">
-        <h3 style={{ display: `inline` }}>{data.site.siteMetadata.title}</h3>
-        </Link>
-          <ul style={{ listStyle: `none`, float: `right` }}>
+    <>
+      <header className="header-container">
+        <nav className="nav-container">
+          <Link to="/">
+          <h3 style={{ display: `inline` }}>{data.site.siteMetadata.title}</h3>
+          </Link>
+          <ul className="nav-list">
             <ListLink to="/">Home</ListLink>
             <ListLink to="/journal/">Journal</ListLink>
             <ListLink to="/projects/">Projects</ListLink>
             <ListLink to="/about/">About</ListLink>
           </ul>
-        {/* <nav>
-          <Link to="/">Home</Link>
-          <Link to="/journal/">Journal</Link>
-          <Link to="/about/">About</Link>
-        </nav> */}
+          <Menu />
+        </nav>
       </header>
-    </div>
+    </>
   )
 };
 
