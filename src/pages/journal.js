@@ -23,7 +23,7 @@ function Journal ({ data }) {
                   — {node.frontmatter.date}
                 </span>
               </h3>
-              <p>{node.excerpt}</p>
+              <p>{node.excerpt}</p> <p className="readMore">Read More...</p>
             </Link>
             {/*
             Note to self: Check structure of tags
