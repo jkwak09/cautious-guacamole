@@ -46,9 +46,9 @@ a:active {
 */
 
 
-/* .header-container{
+.header-container{
   margin: 2rem auto;
-} */
+}
 
 .layout-container{
     /* width: 100vw; */
@@ -171,6 +171,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-menu-wrap {
   position: fixed;
   height: 100%;
+  top: 0;
 }
 
 /* General sidebar styles */
