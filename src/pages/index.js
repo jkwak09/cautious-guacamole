@@ -7,7 +7,6 @@ import { graphql } from "gatsby";
 function Home({ data }) {
   return (
     <>
-    <div className="example"></div>
     <Layout>
       <>
         <Helmet title={`Home | ${data.site.siteMetadata.title}`} />
