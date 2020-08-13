@@ -45,10 +45,6 @@ a:active {
 * MEDIA BREAKPOINTS
 */
 
-.example {
-  padding: 20px;
-  color: white;
-}
 
 /* .header-container{
   margin: 2rem auto;
@@ -56,22 +52,17 @@ a:active {
 
 .layout-container{
     /* width: 100vw; */
-    height: 100vh;
+    min-height: 100vh;
     max-width: 100%;
     position: relative;
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .example {background: red;}
 
   .layout-container{
     border: 5px solid red;
     padding: 0 1.5rem;
-  }
-
-  .header-container{
-    border: 5px solid red;
   }
 
   .nav-list{
@@ -86,15 +77,10 @@ a:active {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .example {background: green;}
 
   .layout-container{
     border: 5px solid green;
     padding: 0 2rem;
-  }
-
-  .header-container{
-    border: 5px solid green;
   }
 
   ul.nav-list{
@@ -115,13 +101,8 @@ a:active {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .example {background: blue;}
 
   .layout-container{
-    border: 5px solid blue;
-  }
-
-  .header-container{
     border: 5px solid blue;
   }
 
@@ -129,7 +110,6 @@ a:active {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .example {background: orange;}
 
   .layout-container{
     border: 5px solid orange;
@@ -138,16 +118,12 @@ a:active {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .example {background: pink;}
 
   .layout-container{
     border: 5px solid pink;
     padding: 0 3rem;
   }
 
-  .header-container{
-    border: 5px solid pink;
-  }
 }
 
 /*
