@@ -1,6 +1,6 @@
 import React from "react";
 import { useStaticQuery, Link, graphql } from "gatsby";
-import Menu from "./menu";
+import BurgerMenu from "./menu";
 
 
 const ListLink = props => (
@@ -22,7 +22,6 @@ function Header() {
     `
   )
   return (
-    <>
       <header className="header-container">
         <nav className="nav-container">
           <Link to="/">
@@ -34,10 +33,10 @@ function Header() {
             <ListLink to="/projects/">Projects</ListLink>
             <ListLink to="/about/">About</ListLink>
           </ul>
-          <Menu />
+          <BurgerMenu />
         </nav>
       </header>
-    </>
+
   )
 };
 
