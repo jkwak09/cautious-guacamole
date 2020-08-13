@@ -1,6 +1,20 @@
 html {
   background-color: #fefdf8;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
 
 /* LINKS */
 a:link {
@@ -36,8 +50,15 @@ a:active {
   color: white;
 }
 
-.header-container{
+/* .header-container{
   margin: 2rem auto;
+} */
+
+.layout-container{
+    /* width: 100vw; */
+    height: 100vh;
+    max-width: 100%;
+    position: relative;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -59,7 +80,7 @@ a:active {
 
   nav.nav-container{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
   }
 }
 
@@ -135,13 +156,15 @@ a:active {
 
 /* Position and sizing of burger button */
 .bm-burger-button {
-  position: fixed;
-  float: right;
-
+  /* position: fixed;
   width: 36px;
   height: 30px;
   right: 36px;
-  top: 36px;
+  top: 36px; */
+  width: 36px;
+  height: 30px;
+  position: relative;
+  float: right;
 }
 
 /* Color/shape of burger icon bars */
@@ -195,6 +218,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Individual item */
 .bm-item {
   display: inline-block;
+  margin-bottom: 1rem;
+  text-decoration: none;
 }
 
 /* Styling of overlay */
