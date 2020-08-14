@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/layout";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
+import Img from "gatsby-image";
 
 function About({ data }) {
   return (
@@ -9,7 +10,7 @@ function About({ data }) {
       <>
         <Helmet title={`About | ${data.site.siteMetadata.title}`} />
         <h1>About {data.site.siteMetadata.title}</h1>
-        <p>This will become the about page.</p>
+        <Img fixed={data.file.childImageSharp.fixed} alt="me" className="profile-picture" />
       </>
     </Layout>
   )
@@ -22,6 +23,13 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    file(relativePath: { eq: "me.jpg" }) {
+      childImageSharp {
+        fixed(width: 250, height: 250) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
   }
