@@ -3,6 +3,7 @@ html {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -39,6 +40,10 @@ a:active {
 
 .readmore {
   color: #408000;
+}
+
+.profile-picture {
+  border-radius: 50%;
 }
 
 /*
@@ -85,8 +90,7 @@ a:active {
 
   ul.nav-list{
     float: right;
-    listStyle: none;
-    display: inline;
+    list-style: none;
   }
 
   .burger-nav-list{
@@ -150,7 +154,7 @@ a:active {
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  background: #a90000;
+  background: #4d9a00;
 }
 
 /* Position and sizing of clickable cross button */
