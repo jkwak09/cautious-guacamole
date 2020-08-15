@@ -207,3 +207,27 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
+
+/*
+* about page
+*/
+.about-body{
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-text{
+  margin-left: 3rem;
+  width: 65%;
+  height: 150vh;
+  display: inline-block;
+}
+
+.about-image{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  width: 25%;
+  height: 25vh;
+  display: inline-block;
+}
