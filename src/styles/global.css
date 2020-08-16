@@ -110,6 +110,38 @@ a:active {
     border: 5px solid blue;
   }
 
+/*
+* journal page ********************************************
+*/
+.post-container{
+  /* display: flex;
+  justify-content: space-between; */
+  height: 75vh;
+  overflow: scroll;
+
+}
+
+.post-scroll{
+  margin-left: 50%;
+  margin-bottom: 1rem;
+  width: 45%;
+  /* height: 25vh; */
+  /* display: inline-block; */
+  top: 0;
+  float: right;
+
+}
+
+.post-sticky{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  width: 45%;
+  float: left;
+  height: 0vh;
+  /* display: inline-block; */
+}
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -118,6 +150,18 @@ a:active {
   .layout-container{
     border: 5px solid orange;
   }
+
+/*
+* journal page ********************************************
+*/
+
+.post-scroll{
+  width: 55%;
+}
+
+.post-sticky{
+  width: 35%;
+}
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -127,6 +171,18 @@ a:active {
     border: 5px solid pink;
     padding: 0 3rem;
   }
+
+  /*
+* journal page ********************************************
+*/
+
+.post-scroll{
+  width: 60%;
+}
+
+.post-sticky{
+  width: 30%;
+}
 
 }
 
@@ -232,34 +288,3 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: inline-block;
 }
 
-/*
-* journal page
-*/
-.post-container{
-  /* display: flex;
-  justify-content: space-between; */
-  height: 75vh;
-  overflow: scroll;
-
-}
-
-.post-scroll{
-  margin-left: 50%;
-  margin-bottom: 1rem;
-  width: 45%;
-  /* height: 25vh; */
-  display: inline-block;
-  top: 0;
-  float: right;
-
-}
-
-.post-sticky{
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-  width: 45%;
-  float: left;
-  height: 0vh;
-  display: inline-block;
-}
