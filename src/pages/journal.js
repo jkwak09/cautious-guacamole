@@ -4,34 +4,60 @@ import Helmet from "react-helmet";
 import { Link, graphql } from "gatsby";
 
 function Journal ({ data }) {
-  // console.log(data);
+  console.log(data);
+
   return(
+
     <Layout>
       <>
-        <Helmet title={`Journal | ${data.site.siteMetadata.title}`}/>
+        <Helmet title={`Journal | ${data.site.siteMetadata.title}`} />
         <h1>
         Blog posts
         </h1>
+
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link to={`/journal${node.fields.slug}`}>
-              <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} />
-              <h3>
-                {node.frontmatter.title}{" "}
-                <span>
-                  — {node.frontmatter.date}
-                </span>
-              </h3>
-              <p>{node.excerpt}</p> <p className="readMore">Read More...</p>
-            </Link>
-            {/*
-            Note to self: Check structure of tags
-            */}
-            <p>{node.frontmatter.tags}</p>
-          </div>
-        ))}
-      </>
+        <div className="post-container">
+        {data.allMarkdownRemark.edges.map(({ node }, index) => {
+            return(
+              <>
+              { index === 0
+              ?
+              <div key={node.id} className="post-sticky">
+                <Link to={`/journal${node.fields.slug}`}>
+                  <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} />
+                  <p>{node.frontmatter.tags}</p>
+                  <h3>
+                    {node.frontmatter.title}{" "}
+                    <span>
+                      — {node.frontmatter.date}
+                    </span>
+                  </h3>
+                  <p>{node.excerpt}</p> <p className="readMore">Read More...</p>
+                </Link>
+
+              </div>
+          :
+              <div key={node.id} className="post-scroll">
+              <Link to={`/journal${node.fields.slug}`}>
+                <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} />
+                <p>{node.frontmatter.tags}</p>
+                <h3>
+                  {node.frontmatter.title}{" "}
+                  <span>
+                    — {node.frontmatter.date}
+                  </span>
+                </h3>
+                <p>{node.excerpt}</p> <p className="readMore">Read More...</p>
+              </Link>
+
+            </div>
+            }
+            </>
+            );
+          }
+        )}
+        </div>
+        </>
     </Layout>
   )
 };
