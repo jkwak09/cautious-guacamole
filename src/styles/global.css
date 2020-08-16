@@ -149,6 +149,7 @@ a:active {
 
   .layout-container{
     border: 5px solid orange;
+    padding: 0 6rem;
   }
 
 /*
@@ -169,7 +170,7 @@ a:active {
 
   .layout-container{
     border: 5px solid pink;
-    padding: 0 3rem;
+    padding: 0 8rem;
   }
 
   /*
