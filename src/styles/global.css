@@ -231,3 +231,34 @@ Note: Beware of modifying this element as it can break the animations - you shou
   height: 25vh;
   display: inline-block;
 }
+
+/*
+* journal page
+*/
+.post-container{
+  /* display: flex;
+  justify-content: space-between; */
+  height: 75vh;
+  overflow: scroll;
+
+}
+
+.post-scroll{
+  margin-left: 3rem;
+  margin-bottom: 3rem;
+  width: 45%;
+  height: 25vh;
+  display: inline-block;
+  float: right;
+
+}
+
+.post-sticky{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  width: 45%;
+  float: left;
+  height: 40vh;
+  /* display: inline-block; */
+}
