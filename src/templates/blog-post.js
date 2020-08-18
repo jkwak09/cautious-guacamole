@@ -10,7 +10,12 @@ export default function BlogPost({ data }) {
       <div>
         <Helmet title={`${post.frontmatter.title} | Journal | ${data.site.siteMetadata.title}`} />
         <h1>{post.frontmatter.title}</h1>
+        {/* This is the post */}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        {/* This will display related posts */}
+        <div className="related-blog-posts">
+          Related blog posts will appear here.
+        </div>
       </div>
     </Layout>
   )
