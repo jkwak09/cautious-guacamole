@@ -38,12 +38,14 @@ a:active {
   text-decoration: none;
 }
 
-.readmore {
-  color: #408000;
-}
-
 .profile-picture {
   border-radius: 50%;
+}
+
+.related-blog-posts{
+  border: 5px solid forestgreen;
+  height: 20vh;
+  width: 100%;
 }
 
 /*

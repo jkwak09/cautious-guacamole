@@ -32,9 +32,8 @@ function Journal ({ data }) {
                       — {node.frontmatter.date}
                     </span>
                   </h3>
-                  <p>{node.excerpt}</p> <p className="readMore">Read More...</p>
-                </Link>
-
+                  </Link>
+                  <p>{node.excerpt}</p>
               </div>
           :
               <div key={node.id} className="post-scroll">
@@ -47,9 +46,8 @@ function Journal ({ data }) {
                     — {node.frontmatter.date}
                   </span>
                 </h3>
-                <p>{node.excerpt}</p> <p className="readMore">Read More...</p>
-              </Link>
-
+                </Link>
+                <p>{node.excerpt}</p>
             </div>
             }
             </>
