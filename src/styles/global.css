@@ -80,6 +80,24 @@ a:active {
     display: flex;
     justify-content: space-between;
   }
+
+  /*
+  projects page ***************************
+  */
+  .project-posts-container{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .project-post{
+
+    display: inline-block;
+    flex: 0 0 100%;
+  }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -101,6 +119,20 @@ a:active {
 
   .bm-burger-button {
     display: none;
+  }
+
+  .project-posts-container{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .project-post{
+
+    display: inline-block;
+    flex: 0 0 47%;
   }
 }
 
@@ -144,6 +176,14 @@ a:active {
   /* display: inline-block; */
 }
 
+/*
+* project page ********************************************
+*/
+
+.project-post{
+  flex: 0 0 30%;
+}
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -165,6 +205,14 @@ a:active {
 .post-sticky{
   width: 35%;
 }
+
+/*
+* project page ********************************************
+*/
+
+.project-post{
+  width:100%;
+}
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -176,16 +224,24 @@ a:active {
   }
 
   /*
-* journal page ********************************************
-*/
+  * journal page ********************************************
+  */
 
-.post-scroll{
-  width: 60%;
-}
+  .post-scroll{
+    width: 60%;
+  }
 
-.post-sticky{
-  width: 30%;
-}
+  .post-sticky{
+    width: 30%;
+  }
+
+  /*
+  * project page ********************************************
+  */
+
+  .project-post{
+    width:100%;
+  }
 
 }
 
