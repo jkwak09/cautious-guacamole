@@ -13,8 +13,9 @@ function Projects ({ data }) {
         Projects
         </h1>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+        <div className="project-posts-container">
         {data.allMarkdownRemark.edges.map(({ node }) => (
-            <div key={node.id}>
+            <div key={node.id} className="project-post">
               <Link to={`/projects${node.fields.slug}`}>
                 <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} />
                 <h3>
@@ -32,6 +33,7 @@ function Projects ({ data }) {
             </div>
 
         ))}
+        </div>
       </>
     </Layout>
   )
