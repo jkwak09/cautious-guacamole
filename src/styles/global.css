@@ -17,7 +17,9 @@ div {
 }
 
 
-/* LINKS */
+/*
+LINKS **************************************
+*/
 a:link {
   color: #4d9a00;
   text-decoration: none;
@@ -49,9 +51,8 @@ a:active {
 }
 
 /*
-* MEDIA BREAKPOINTS
+* MEDIA BREAKPOINTS *********************************
 */
-
 
 .header-container{
   margin: 2rem auto;
@@ -211,8 +212,9 @@ a:active {
 */
 
 .project-post{
-  width:100%;
+  flex: 0 0 23%;
 }
+
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
