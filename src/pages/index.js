@@ -10,8 +10,12 @@ function Home({ data }) {
     <Layout>
       <>
         <Helmet title={`Home | ${data.site.siteMetadata.title}`} />
-        <h1>Home Page</h1>
-        <p>This will become the home page.</p>
+        <div className="home-carousel">
+          <i>PLACEHOLDER FOR CAROUSEL</i>
+        </div>
+        <div className="home-recent-posts">
+          <i>PLACEHOLDER FOR RECENT POSTS</i>
+        </div>
       </>
     </Layout>
     </>
