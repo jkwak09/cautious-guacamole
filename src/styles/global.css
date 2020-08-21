@@ -349,3 +349,17 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: inline-block;
 }
 
+/*
+* HOME PAGE placeholder******************************
+*/
+.home-carousel{
+  border: 5px solid forestgreen;
+  height: 50vh;
+  width: 100%;
+}
+
+.home-recent-posts{
+  border: 5px solid maroon;
+  height: 35vh;
+  width: 100%;
+}
