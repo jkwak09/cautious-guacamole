@@ -3,7 +3,7 @@ path: html-and-markdown
 date: 2020-08-08T02:49:25.376Z
 title: HTML and Markdown
 posttype: project
-thumbnail: /assets/screen-shot-2019-03-21-at-9.16.22-am.png
+thumbnail: /assets/project-post-aspect-ratio
 altText: random image
 tags:
   - test
