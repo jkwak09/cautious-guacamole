@@ -3,7 +3,7 @@ path: test-project-post
 date: 2020-08-08T01:55:00.553Z
 title: Test Project Post
 posttype: project
-thumbnail: /assets/sahara-hotnights.jpg
+thumbnail: /assets/project-post-aspect-ratio
 altText: Sahara Hotnights
 tags:
   - diy
