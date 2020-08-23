@@ -3,7 +3,7 @@ path: test-post-4
 date: 2020-08-19T01:12:45.800Z
 title: test post 4
 posttype: project
-thumbnail: /assets/screen-shot-2019-11-13-at-8.43.58-am.png
+thumbnail: /assets/project-post-aspect-ratio
 altText: asdkjasdjsldkjasldsa
 tags:
   - test
