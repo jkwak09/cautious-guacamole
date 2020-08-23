@@ -3,7 +3,7 @@ path: test-post-3
 date: 2020-08-19T01:11:06.633Z
 title: test post 3
 posttype: project
-thumbnail: /assets/match.cloche.smoke.jpg
+thumbnail: /assets/project-post-aspect-ratio
 altText: sjadkljdaksldjasldjaslkd
 tags:
   - cloche
