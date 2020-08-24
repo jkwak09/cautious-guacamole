@@ -17,14 +17,14 @@ function Projects ({ data }) {
         {data.allMarkdownRemark.edges.map(({ node }) => (
             <div key={node.id} className="project-post">
               <Link to={`/projects${node.fields.slug}`}>
-                <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} />
-                <h3>
+                <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} className="project-post-image" />
+                <h3 className="project-post-title">
                   {node.frontmatter.title}{" "}
-                  <span>
-                    — {node.frontmatter.date}
-                  </span>
                 </h3>
-                <p>{node.excerpt}</p>
+                <div className="project-post-date">
+                  {node.frontmatter.date}
+                </div>
+                <p className="project-post-excerpt">{node.excerpt}</p>
               </Link>
                 {/*
                 Note to self: Check structure of tags
