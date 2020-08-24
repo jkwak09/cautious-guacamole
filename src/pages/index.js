@@ -16,6 +16,9 @@ function Home({ data }) {
         <div className="home-recent-posts">
           <i>PLACEHOLDER FOR RECENT POSTS</i>
         </div>
+        <div className="home-recent-posts">
+          <i>PLACEHOLDER FOR COMING SOON</i>
+        </div>
       </>
     </Layout>
     </>
