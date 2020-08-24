@@ -65,6 +65,18 @@ a:active {
     position: relative;
 }
 
+.project-post-image{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.project-post-excerpt{
+  color: black;
+  margin-top: 10px;
+}
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
@@ -94,11 +106,21 @@ a:active {
   }
 
   .project-post{
-
     display: inline-block;
     flex: 0 0 100%;
   }
 
+  .project-posts-container{
+    font-size: large;
+  }
+
+  .project-post-title{
+    font-size: xx-large;
+  }
+
+  .project-post-date{
+    font-size: medium;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -131,9 +153,20 @@ a:active {
   }
 
   .project-post{
-
     display: inline-block;
     flex: 0 0 47%;
+  }
+
+  .project-posts-container{
+    font-size: medium;
+  }
+
+  .project-post-title{
+    font-size: x-large;
+  }
+
+  .project-post-date{
+    font-size: small;
   }
 }
 
@@ -145,45 +178,57 @@ a:active {
     border: 5px solid blue;
   }
 
-/*
-* journal page ********************************************
-*/
-.post-container{
-  /* display: flex;
-  justify-content: space-between; */
-  height: 75vh;
-  overflow: scroll;
+  /*
+  * journal page ********************************************
+  */
+  .post-container{
+    /* display: flex;
+    justify-content: space-between; */
+    height: 75vh;
+    overflow: scroll;
 
-}
+  }
 
-.post-scroll{
-  margin-left: 50%;
-  margin-bottom: 1rem;
-  width: 45%;
-  /* height: 25vh; */
-  /* display: inline-block; */
-  top: 0;
-  float: right;
+  .post-scroll{
+    margin-left: 50%;
+    margin-bottom: 1rem;
+    width: 45%;
+    /* height: 25vh; */
+    /* display: inline-block; */
+    top: 0;
+    float: right;
 
-}
+  }
 
-.post-sticky{
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-  width: 45%;
-  float: left;
-  height: 0vh;
-  /* display: inline-block; */
-}
+  .post-sticky{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    width: 45%;
+    float: left;
+    height: 0vh;
+    /* display: inline-block; */
+  }
 
-/*
-* project page ********************************************
-*/
+  /*
+  * project page ********************************************
+  */
 
-.project-post{
-  flex: 0 0 30%;
-}
+  .project-post{
+    flex: 0 0 30%;
+  }
+
+  .project-posts-container{
+    font-size: medium;
+  }
+
+  .project-post-title{
+    font-size: x-large;
+  }
+
+  .project-post-date{
+    font-size: small;
+  }
 
 }
 
@@ -214,6 +259,8 @@ a:active {
 .project-post{
   flex: 0 0 23%;
 }
+
+
 
 }
 
