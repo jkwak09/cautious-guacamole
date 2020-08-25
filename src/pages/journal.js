@@ -36,9 +36,11 @@ function Journal ({ data }) {
                   <p>{node.excerpt}</p>
               </div>
           :
+              // This is the rest of the posts
               <div key={node.id} className="post-scroll">
               <Link to={`/journal${node.fields.slug}`}>
-                <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} />
+                <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} className="journal-post-image" />
+                <div className="journal-post-description">
                 <p>{node.frontmatter.tags}</p>
                 <h3>
                   {node.frontmatter.title}{" "}
@@ -46,8 +48,9 @@ function Journal ({ data }) {
                     — {node.frontmatter.date}
                   </span>
                 </h3>
-                </Link>
                 <p>{node.excerpt}</p>
+                </div>
+                </Link>
             </div>
             }
             </>
