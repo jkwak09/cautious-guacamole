@@ -198,6 +198,17 @@ a:active {
     top: 0;
     float: right;
 
+
+  }
+
+  .journal-post-image{
+    float: left;
+    width: 47%;
+  }
+
+  .journal-post-description{
+    float: right;
+    width: 47%;
   }
 
   .post-sticky{
