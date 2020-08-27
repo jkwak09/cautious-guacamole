@@ -3,6 +3,8 @@ path: test-post
 date: 2020-08-01T13:53:09.689Z
 title: Test Post
 posttype: blog
+thumbnail: /assets/project-post-aspect-ratio
+altText: test
 tags:
   - food
   - drink
