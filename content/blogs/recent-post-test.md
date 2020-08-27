@@ -3,7 +3,7 @@ path: recent-post-test
 date: 2020-08-16T16:11:36.700Z
 title: Recent Post Test
 posttype: blog
-thumbnail: /assets/sahara-hotnights.jpg
+thumbnail: /assets/project-post-aspect-ratio
 altText: Sahara Hotnights
 tags:
   - music
