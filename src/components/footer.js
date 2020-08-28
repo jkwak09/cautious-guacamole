@@ -3,8 +3,13 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <footer style={{ position: `absolute`, bottom: `0`, maxWidth: `100vw`, height: `2.5rem` }}>
-        <div>&copy; { new Date().getFullYear() } Cautious Guacamole</div>
+      <footer className style={{ bottom: `0`, border: `5px solid green`, width: `100%`}}>
+        <div>
+          Links will go here.
+        </div>
+        <div className="copyright-container">
+          <div className="copyright">&copy; { new Date().getFullYear() } Cautious Guacamole </div>
+        </div>
       </footer>
     </>
   )
