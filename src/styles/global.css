@@ -51,8 +51,19 @@ a:active {
 }
 
 /*
-* MEDIA BREAKPOINTS *********************************
+* COPYRIGHT * FOOTER ************
 */
+.copyright-container{
+  display: flex;
+  justify-content: center;
+  border: 5px solid red;
+  width: 100%;
+}
+
+.copyright{
+  font-size: small;
+}
+
 
 .header-container{
   margin: 2rem auto;
@@ -76,6 +87,9 @@ a:active {
   margin-top: 10px;
 }
 
+/*
+* MEDIA BREAKPOINTS *********************************
+*/
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
