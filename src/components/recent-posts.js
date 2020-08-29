@@ -12,7 +12,6 @@ function RecentPosts () {
         },
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC },
-          filter: {fileAbsolutePath: {regex: "\/blogs/"}},
           limit: 4
           ) {
           totalCount
