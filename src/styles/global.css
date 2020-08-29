@@ -256,6 +256,22 @@ a:active {
     font-size: small;
   }
 
+  /*
+  * Recent Posts
+  */
+
+  .recent-posts-container{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  .recent-post{
+    flex: 0 0 23%;
+  }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -433,6 +449,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .home-recent-posts{
   border: 5px solid maroon;
-  height: 35vh;
+  min-height: 35vh;
   width: 100%;
 }
