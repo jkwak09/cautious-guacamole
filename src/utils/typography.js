@@ -1,5 +1,5 @@
 import Typography from "typography";
-import moragaTheme from 'typography-theme-moraga';
+import TwinPeaksTheme from 'typography-theme-twin-peaks';
 
 const typography = new Typography(
 //   {
@@ -15,7 +15,7 @@ const typography = new Typography(
 //   ],
 //   bodyFontFamily: ["Georgia", "serif"],
 // }
-moragaTheme
+TwinPeaksTheme
 );
 
 export default typography;
