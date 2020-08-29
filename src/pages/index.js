@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 import Carousel from "../components/carousel";
+import RecentPosts from "../components/recent-posts"
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 
@@ -14,7 +15,7 @@ function Home({ data }) {
           <Carousel />
         </div>
         <div className="home-recent-posts">
-          <i>PLACEHOLDER FOR RECENT POSTS</i>
+          <RecentPosts />
         </div>
         <div className="home-recent-posts">
           <i>PLACEHOLDER FOR COMING SOON</i>
