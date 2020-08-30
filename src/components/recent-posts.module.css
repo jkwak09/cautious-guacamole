@@ -20,7 +20,7 @@
   * Recent Posts
   */
 
-  .recent-posts-container{
+  .recentPostsContainer{
 
     display: flex;
     justify-content: space-between;
@@ -28,18 +28,18 @@
     flex-wrap: nowrap;
   }
 
-  .recent-post{
+  .recentPost{
     flex: 0 0 23.5%;
   }
 
-  .recent-post-title{
+  .recentPostTitle{
     font-size: x-large;
   }
 
-  .recent-post-excerpt{
+  .recentPostExcerpt{
     font-size: medium;
   }
-  .recent-post-date {
+  .recentPostDate {
     font-size: x-small;
   }
 
