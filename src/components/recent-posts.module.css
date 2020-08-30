@@ -2,14 +2,44 @@
 * MEDIA BREAKPOINTS *********************************
 */
 
+.recentPostsContainer{
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .recentPostsContainer{
+    flex-wrap: wrap;
+  }
 
+  .recentPostDate {
+    font-size: medium;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  .recentPostsContainer{
+    flex-wrap: wrap;
+  }
 
+  .recentPost{
+    flex: 0 0 48%;
+  }
+
+  .recentPostTitle{
+    font-size: xx-large;
+  }
+
+  .recentPostExcerpt{
+    font-size: large;
+  }
+  .recentPostDate {
+    font-size: small;
+  }
 }
 
 
@@ -21,10 +51,6 @@
   */
 
   .recentPostsContainer{
-
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     flex-wrap: nowrap;
   }
 
