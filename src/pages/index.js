@@ -5,19 +5,21 @@ import RecentPosts from "../components/recent-posts"
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 
+import homeStyles from "./index.module.css";
+
 function Home({ data }) {
   return (
     <>
     <Layout>
       <>
         <Helmet title={`Home | ${data.site.siteMetadata.title}`} />
-        <div className="home-carousel">
+        <div className={homeStyles.homeCarousel}>
           <Carousel />
         </div>
-        <div className="home-recent-posts">
+        <div className={homeStyles.homeRecentPosts}>
           <RecentPosts />
         </div>
-        <div className="home-recent-posts">
+        <div className={homeStyles.homeRecentPosts}>
           <i>PLACEHOLDER FOR COMING SOON</i>
         </div>
       </>
