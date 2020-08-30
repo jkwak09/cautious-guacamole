@@ -1,7 +1,10 @@
 import React from "react";
 import { useStaticQuery, Link, graphql } from "gatsby";
 
+import recentPostStyles from "./recent-posts.module.css";
+
 function RecentPosts () {
+
   const data = useStaticQuery(
     graphql`
       query {
@@ -39,34 +42,34 @@ function RecentPosts () {
   return(
     <>
       <h2>Recent Posts</h2>
-      <div className="recent-posts-container">
+      <div className={recentPostStyles.recentPostsContainer}>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <>
           { node.frontmatter.posttype === "project"
             ?
-            <div key={node.id} className="recent-post">
+            <div key={node.id} className={recentPostStyles.recentPost}>
               <Link to={`/projects${node.fields.slug}`}>
-                <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} className="recent-post-image" />
-                <h3 className="recent-post-title">
-                  {node.frontmatter.title}{" "}
+                <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} className={recentPostStyles.recentPostImage} />
+                <h3 className={recentPostStyles.recentPostTitle}>
+                  {node.frontmatter.title}
                 </h3>
-                <div className="recent-post-date">
+                <div className={recentPostStyles.recentPostDate}>
                   {node.frontmatter.date}
                 </div>
-                <p className="recent-post-excerpt">{node.excerpt}</p>
+                <p className={recentPostStyles.recentPostExcerpt}>{node.excerpt}</p>
               </Link>
             </div>
             :
-            <div key={node.id} className="recent-post">
+            <div key={node.id} className={recentPostStyles.recentPost}>
               <Link to={`/journal${node.fields.slug}`}>
-                <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} className="recent-post-image" />
-                <h3 className="recent-post-title">
-                  {node.frontmatter.title}{" "}
+                <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} className={recentPostStyles.recentPostImage} />
+                <h3 className={recentPostStyles.recentPostTitle}>
+                  {node.frontmatter.title}
                 </h3>
-                <div className="recent-post-date">
+                <div className={recentPostStyles.recentPostDate}>
                   {node.frontmatter.date}
                 </div>
-                <p className="recent-post-excerpt">{node.excerpt}</p>
+                <p className={recentPostStyles.recentPostExcerpt}>{node.excerpt}</p>
               </Link>
             </div>
           }
@@ -78,37 +81,3 @@ function RecentPosts () {
 };
 
 export default RecentPosts;
-
-// export const query = graphql`
-//   query {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     },
-//     allMarkdownRemark(
-//       sort: { fields: [frontmatter___date], order: DESC },
-//       filter: {fileAbsolutePath: {regex: "\/blogs/"}},
-//       limit: 4
-//       ) {
-//       totalCount
-//       edges {
-//         node {
-//           id
-//           frontmatter {
-//             title
-//             date(formatString: "MMMM DD, YYYY")
-//             tags
-//             thumbnail
-//             altText
-//             posttype
-//           }
-//           fields {
-//             slug
-//           }
-//           excerpt
-//         }
-//       }
-//     }
-//   }
-// `;
