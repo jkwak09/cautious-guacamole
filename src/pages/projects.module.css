@@ -1,0 +1,116 @@
+
+.projectPostImage{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.projectPostExcerpt{
+  color: black;
+  margin-top: 10px;
+}
+
+
+/*
+* MEDIA BREAKPOINTS *********************************
+*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+  .projectPostsContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .projectPost{
+    display: inline-block;
+    flex: 0 0 100%;
+  }
+
+  .projectPostsContainer{
+    font-size: large;
+  }
+
+  .projectPostTitle{
+    font-size: xx-large;
+  }
+
+  .projectPostDate{
+    font-size: medium;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+  .projectPostsContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .projectPost{
+    display: inline-block;
+    flex: 0 0 47%;
+  }
+
+  .projectPostsContainer{
+    font-size: medium;
+  }
+
+  .project-post-title{
+    font-size: x-large;
+  }
+
+  .project-post-date{
+    font-size: small;
+  }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+  .projectPost{
+    flex: 0 0 30%;
+  }
+
+  .projectPostsContainer{
+    font-size: medium;
+  }
+
+  .projectPostTitle{
+    font-size: x-large;
+  }
+
+  .projectPostDate{
+    font-size: small;
+  }
+
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+.projectPost{
+  flex: 0 0 23%;
+}
+
+
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+
+  .projectPost{
+    width:100%;
+  }
+
+}
