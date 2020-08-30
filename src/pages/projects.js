@@ -3,8 +3,9 @@ import Layout from "../components/layout";
 import Helmet from "react-helmet";
 import { Link, graphql } from "gatsby";
 
+import projectPostStyles from "./projects.module.css";
+
 function Projects ({ data }) {
-  // console.log(data);
   return(
     <Layout>
       <>
@@ -13,22 +14,19 @@ function Projects ({ data }) {
         Projects
         </h1>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-        <div className="project-posts-container">
+        <div className={projectPostStyles.projectPostsContainer}>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-            <div key={node.id} className="project-post">
+            <div key={node.id} className={projectPostStyles.projectPost}>
               <Link to={`/projects${node.fields.slug}`}>
-                <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} className="project-post-image" />
-                <h3 className="project-post-title">
-                  {node.frontmatter.title}{" "}
+                <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} className={projectPostStyles.projectPostImage} />
+                <h3 className={projectPostStyles.projectPostTitle}>
+                  {node.frontmatter.title}
                 </h3>
-                <div className="project-post-date">
+                <div className={projectPostStyles.projectPostDate}>
                   {node.frontmatter.date}
                 </div>
-                <p className="project-post-excerpt">{node.excerpt}</p>
+                <p className={projectPostStyles.projectPostExcerpt}>{node.excerpt}</p>
               </Link>
-                {/*
-                Note to self: Check structure of tags
-                */}
               <p>{node.frontmatter.tags}</p>
             </div>
 
