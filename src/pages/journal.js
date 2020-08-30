@@ -3,6 +3,8 @@ import Layout from "../components/layout";
 import Helmet from "react-helmet";
 import { Link, graphql } from "gatsby";
 
+import journalStyles from "./journal.module.css";
+
 function Journal ({ data }) {
   console.log(data);
 
@@ -16,13 +18,13 @@ function Journal ({ data }) {
         </h1>
 
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-        <div className="post-container">
+        <div className={journalStyles.postContainer}>
         {data.allMarkdownRemark.edges.map(({ node }, index) => {
             return(
               <>
               { index === 0
               ?
-              <div key={node.id} className="post-sticky">
+              <div key={node.id} className={journalStyles.postSticky}>
                 <Link to={`/journal${node.fields.slug}`}>
                   <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} />
                   <p>{node.frontmatter.tags}</p>
@@ -37,10 +39,10 @@ function Journal ({ data }) {
               </div>
           :
               // This is the rest of the posts
-              <div key={node.id} className="post-scroll">
+              <div key={node.id} className={journalStyles.postScroll}>
               <Link to={`/journal${node.fields.slug}`}>
-                <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} className="journal-post-image" />
-                <div className="journal-post-description">
+                <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} className={journalStyles.journalPostImage} />
+                <div className={journalStyles.journalPostDescription}>
                 <p>{node.frontmatter.tags}</p>
                 <h3>
                   {node.frontmatter.title}{" "}
