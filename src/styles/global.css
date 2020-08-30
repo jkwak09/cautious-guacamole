@@ -40,53 +40,6 @@ a:active {
   text-decoration: none;
 }
 
-.profile-picture {
-  border-radius: 50%;
-}
-
-.related-blog-posts{
-  border: 5px solid forestgreen;
-  height: 20vh;
-  width: 100%;
-}
-
-/*
-* COPYRIGHT * FOOTER ************
-*/
-.copyright-container{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding-bottom: 4rem;
-  padding-top: 2rem;
-}
-
-.copyright{
-  font-size: small;
-}
-
-
-.header-container{
-  margin: 2rem auto;
-}
-
-.layout-container{
-    /* width: 100vw; */
-    min-height: 100vh;
-    max-width: 100%;
-    position: relative;
-}
-
-.project-post-image{
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.project-post-excerpt{
-  color: black;
-  margin-top: 10px;
-}
 
 /*
 * MEDIA BREAKPOINTS *********************************
@@ -95,62 +48,10 @@ a:active {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
-  .layout-container{
-    border: 5px solid red;
-    padding: 0 1.5rem;
-  }
-
-  .nav-list{
-    display: none;
-  }
-
-  nav.nav-container{
-    display: flex;
-    justify-content: space-between;
-  }
-
-  /*
-  projects page ***************************
-  */
-  .project-posts-container{
-
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .project-post{
-    display: inline-block;
-    flex: 0 0 100%;
-  }
-
-  .project-posts-container{
-    font-size: large;
-  }
-
-  .project-post-title{
-    font-size: xx-large;
-  }
-
-  .project-post-date{
-    font-size: medium;
-  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-
-  .layout-container{
-    border: 5px solid green;
-    padding: 0 2rem;
-  }
-
-  ul.nav-list{
-    float: right;
-    list-style: none;
-  }
-
   .burger-nav-list{
     display: none;
   }
@@ -159,185 +60,30 @@ a:active {
     display: none;
   }
 
-  .project-posts-container{
-
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .project-post{
-    display: inline-block;
-    flex: 0 0 47%;
-  }
-
-  .project-posts-container{
-    font-size: medium;
-  }
-
-  .project-post-title{
-    font-size: x-large;
-  }
-
-  .project-post-date{
-    font-size: small;
-  }
 }
 
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
-  .layout-container{
-    border: 5px solid blue;
-  }
-
-  /*
-  * journal page ********************************************
-  */
-  .post-container{
-    /* display: flex;
-    justify-content: space-between; */
-    height: 75vh;
-    overflow: scroll;
-
-  }
-
-  .post-scroll{
-    margin-left: 50%;
-    margin-bottom: 1rem;
-    width: 45%;
-    /* height: 25vh; */
-    /* display: inline-block; */
-    top: 0;
-    float: right;
-
-
-  }
-
-  .journal-post-image{
-    float: left;
-    width: 47%;
-  }
-
-  .journal-post-description{
-    float: right;
-    width: 47%;
-  }
-
-  .post-sticky{
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-    width: 45%;
-    float: left;
-    height: 0vh;
-    /* display: inline-block; */
-  }
-
-  /*
-  * project page ********************************************
-  */
-
-  .project-post{
-    flex: 0 0 30%;
-  }
-
-  .project-posts-container{
-    font-size: medium;
-  }
-
-  .project-post-title{
-    font-size: x-large;
-  }
-
-  .project-post-date{
-    font-size: small;
-  }
-
-  /*
-  * Recent Posts
-  */
-
-  .recent-posts-container{
-
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-  }
-
-  .recent-post{
-    flex: 0 0 23%;
-  }
 
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
-  .layout-container{
-    border: 5px solid orange;
-    padding: 0 6rem;
-  }
-
-/*
-* journal page ********************************************
-*/
-
-.post-scroll{
-  width: 55%;
-}
-
-.post-sticky{
-  width: 35%;
-}
-
-/*
-* project page ********************************************
-*/
-
-.project-post{
-  flex: 0 0 23%;
-}
-
-
-
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
-  .layout-container{
-    border: 5px solid pink;
-    padding: 0 8rem;
-  }
-
-  /*
-  * journal page ********************************************
-  */
-
-  .post-scroll{
-    width: 60%;
-  }
-
-  .post-sticky{
-    width: 30%;
-  }
-
-  /*
-  * project page ********************************************
-  */
-
-  .project-post{
-    width:100%;
-  }
 
 }
 
+
+
 /*
-* Burger Menu
+* Burger Menu ***************************************
 */
 
 /* Position and sizing of burger button */
@@ -414,41 +160,3 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background: rgba(0, 0, 0, 0.3);
 }
 
-/*
-* about page
-*/
-.about-body{
-  display: flex;
-  justify-content: space-between;
-}
-
-.about-text{
-  margin-left: 3rem;
-  width: 65%;
-  height: 150vh;
-  display: inline-block;
-}
-
-.about-image{
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-  width: 25%;
-  height: 25vh;
-  display: inline-block;
-}
-
-/*
-* HOME PAGE placeholder******************************
-*/
-.home-carousel{
-  border: 5px solid forestgreen;
-  background-color: midnightblue;
-  width: 100%;
-}
-
-.home-recent-posts{
-  border: 5px solid maroon;
-  min-height: 35vh;
-  width: 100%;
-}
