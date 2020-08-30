@@ -38,45 +38,38 @@ function RecentPosts () {
   )
   return(
     <>
+      <h2>Recent Posts</h2>
       <div className="recent-posts-container">
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <>
-        { node.frontmatter.posttype === "project"
-          ?
-          <div key={node.id} className="recent-post">
-            <Link to={`/projects${node.fields.slug}`}>
-              <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} className="recent-post-image" />
-              <h3 className="recent-post-title">
-                {node.frontmatter.title}{" "}
-              </h3>
-              <div className="recent-post-date">
-                {node.frontmatter.date}
-              </div>
-              <p className="recent-post-excerpt">{node.excerpt}</p>
-            </Link>
-              {/*
-              Note to self: Check structure of tags
-              */}
-            <p>{node.frontmatter.tags}</p>
-          </div>
-          :
-          <div key={node.id} className="recent-post">
-            <Link to={`/journal${node.fields.slug}`}>
-              <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} className="recent-post-image" />
-              <h3 className="recent-post-title">
-                {node.frontmatter.title}{" "}
-              </h3>
-              <div className="recent-post-date">
-                {node.frontmatter.date}
-              </div>
-              <p className="recent-post-excerpt">{node.excerpt}</p>
-            </Link>
-              {/*
-              Note to self: Check structure of tags
-              */}
-            <p>{node.frontmatter.tags}</p>
-          </div>
-        }
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <>
+          { node.frontmatter.posttype === "project"
+            ?
+            <div key={node.id} className="recent-post">
+              <Link to={`/projects${node.fields.slug}`}>
+                <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} className="recent-post-image" />
+                <h3 className="recent-post-title">
+                  {node.frontmatter.title}{" "}
+                </h3>
+                <div className="recent-post-date">
+                  {node.frontmatter.date}
+                </div>
+                <p className="recent-post-excerpt">{node.excerpt}</p>
+              </Link>
+            </div>
+            :
+            <div key={node.id} className="recent-post">
+              <Link to={`/journal${node.fields.slug}`}>
+                <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} className="recent-post-image" />
+                <h3 className="recent-post-title">
+                  {node.frontmatter.title}{" "}
+                </h3>
+                <div className="recent-post-date">
+                  {node.frontmatter.date}
+                </div>
+                <p className="recent-post-excerpt">{node.excerpt}</p>
+              </Link>
+            </div>
+          }
         </>
       ))}
       </div>
