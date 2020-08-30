@@ -1,0 +1,62 @@
+.layoutContainer{
+    /* width: 100vw; */
+    min-height: 100vh;
+    max-width: 100%;
+    position: relative;
+}
+
+/*
+* MEDIA BREAKPOINTS *********************************
+*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+  .layoutContainer{
+    border: 5px solid red;
+    padding: 0 1.5rem;
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+  .layoutContainer{
+    border: 5px solid green;
+    padding: 0 2rem;
+  }
+
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+  .layoutContainer{
+    border: 5px solid blue;
+  }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+  .layoutContainer{
+    border: 5px solid orange;
+    padding: 0 6rem;
+  }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+  .layoutContainer{
+    border: 5px solid pink;
+    padding: 0 8rem;
+  }
+
+
+}
+
