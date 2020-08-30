@@ -1,5 +1,7 @@
 import React from "react";
 
+import footerStyles from "./footer.module.css";
+
 function Footer() {
   return (
     <>
@@ -7,8 +9,8 @@ function Footer() {
         <div>
           Links will go here.
         </div>
-        <div className="copyright-container">
-          <div className="copyright">&copy; { new Date().getFullYear() } Cautious Guacamole </div>
+        <div className={footerStyles.copyright-container}>
+          <div className={footerStyles.copyright}>&copy; { new Date().getFullYear() } Cautious Guacamole </div>
         </div>
       </footer>
     </>
