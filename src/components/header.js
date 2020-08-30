@@ -2,6 +2,7 @@ import React from "react";
 import { useStaticQuery, Link, graphql } from "gatsby";
 import BurgerMenu from "./menu";
 
+import headerStyles from "./header.module.css";
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, marginRight: `1rem` }}>
@@ -22,12 +23,12 @@ function Header() {
     `
   )
   return (
-      <header className="header-container">
-        <nav className="nav-container">
+      <header className={headerStyles.headerContainer}>
+        <nav className={headerStyles.navContainer}>
           <Link to="/">
           <h3 style={{ display: `inline` }}>{data.site.siteMetadata.title}</h3>
           </Link>
-          <ul className="nav-list">
+          <ul className={headerStyles.navList}>
             <ListLink to="/">Home</ListLink>
             <ListLink to="/journal/">Journal</ListLink>
             <ListLink to="/projects/">Projects</ListLink>
