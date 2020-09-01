@@ -5,7 +5,7 @@ import BurgerMenu from "./menu";
 import headerStyles from "./header.module.css";
 
 const ListLink = props => (
-  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
+  <li style={{ display: `inline-block`, marginLeft: `1rem` }}>
     <Link to={props.to} partiallyActive={true}>{props.children}</Link>
   </li>
 );
