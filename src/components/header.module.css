@@ -21,6 +21,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
+    align-content: center;
   }
 
 
@@ -58,12 +59,12 @@
 
   .navContainer{
     display: block;
-
   }
 
   .navLink {
     margin-right: 0;
     margin-left: 1rem;
+    padding-top: 8px;
   }
 
   ul.navList{
