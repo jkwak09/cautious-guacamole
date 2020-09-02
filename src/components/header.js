@@ -5,7 +5,7 @@ import BurgerMenu from "./menu";
 import headerStyles from "./header.module.css";
 
 const ListLink = props => (
-  <li style={{ display: `inline-block`, marginLeft: `1rem` }}>
+  <li className={headerStyles.navLink} >
     <Link to={props.to} partiallyActive={true}>{props.children}</Link>
   </li>
 );
@@ -26,7 +26,7 @@ function Header() {
       <header className={headerStyles.headerContainer}>
         <nav className={headerStyles.navContainer}>
           <Link to="/">
-          <h3 style={{ display: `inline` }}>{data.site.siteMetadata.title}</h3>
+          <h3 className={headerStyles.siteTitle} style={{ display: `inline` }}>{data.site.siteMetadata.title}</h3>
           </Link>
           <ul className={headerStyles.navList}>
             <ListLink to="/">Home</ListLink>

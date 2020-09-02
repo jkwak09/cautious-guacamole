@@ -3,30 +3,51 @@
   margin: 2rem auto;
 }
 
+
 /*
 * MEDIA BREAKPOINTS *********************************
 */
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-
   .navList{
     display: none;
   }
+  .siteTitle{
+    display: inline;
+  }
 
-  nav.navContainer{
+  .navContainer{
     display: flex;
     justify-content: space-between;
+    flex-wrap: nowrap;
   }
+
 
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 
+  .navContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   ul.navList{
-    float: right;
+    display: block;
     list-style: none;
+  }
+
+  .navLink {
+    display: inline-block;
+    margin: 0 .5rem;
+
+  }
+
+  .siteTitle{
+    display: block;
   }
 
 }
@@ -35,6 +56,24 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
+  .navContainer{
+    display: block;
+
+  }
+
+  .navLink {
+    margin-right: 0;
+    margin-left: 1rem;
+  }
+
+  ul.navList{
+    float: right;
+  }
+
+  .siteTitle{
+    display: inline;
+
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
