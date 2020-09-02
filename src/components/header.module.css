@@ -39,16 +39,20 @@
   ul.navList{
     display: block;
     list-style: none;
+    flex-basis: 100%;
+    text-align: center;
+    margin: 0;
   }
 
   .navLink {
     display: inline-block;
-    margin: 0 .5rem;
+    margin: 0 1rem;
 
   }
 
   .siteTitle{
     display: block;
+    flex-basis: 100%;
   }
 
 }
