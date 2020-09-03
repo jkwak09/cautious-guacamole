@@ -11,7 +11,7 @@ function About({ data }) {
     <Layout>
       <>
         <Helmet title={`About | ${data.site.siteMetadata.title}`} />
-        <h1>About {data.site.siteMetadata.title}</h1>
+        <h1 className="page-title">About {data.site.siteMetadata.title}</h1>
         <div className={aboutStyles.aboutBody}>
         <div className={aboutStyles.aboutImage}>
         <Img fixed={data.file.childImageSharp.fixed} alt="me" className={aboutStyles.profilePicture} />
