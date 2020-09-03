@@ -1,7 +1,12 @@
 import React from "react";
 import Carousel from 'react-bootstrap/Carousel';
 
+import Image from "./image.js";
+
+
+
 function HomeCarousel() {
+
   return (
     <Carousel>
       <Carousel.Item>
@@ -10,6 +15,8 @@ function HomeCarousel() {
           src="holder.js/800x400?text=First slide&bg=373940"
           alt="First slide"
         /> */}
+        <Image alt="banner 1" filename="banner1.jpg" />
+
         <Carousel.Caption>
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -21,6 +28,7 @@ function HomeCarousel() {
           src="holder.js/800x400?text=Second slide&bg=282c34"
           alt="Third slide"
         /> */}
+        <Image alt="banner 2" filename="banner2.jpg" />
 
         <Carousel.Caption>
           <h3>Second slide label</h3>
@@ -33,6 +41,8 @@ function HomeCarousel() {
           src="holder.js/800x400?text=Third slide&bg=20232a"
           alt="Third slide"
         /> */}
+
+        <Image alt="banner 3" filename="banner3.jpg" />
 
         <Carousel.Caption>
           <h3>Third slide label</h3>
