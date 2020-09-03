@@ -10,7 +10,7 @@ function Projects ({ data }) {
     <Layout>
       <>
         <Helmet title={`Projects | ${data.site.siteMetadata.title}`}/>
-        <h1>
+        <h1 className="page-title">
         Projects
         </h1>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
