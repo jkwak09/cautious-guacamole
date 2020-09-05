@@ -3,9 +3,13 @@ import Layout from "../components/layout";
 import Helmet from "react-helmet";
 import { Link, graphql } from "gatsby";
 
+import Pagination from "../components/pagination";
+
 import projectPostStyles from "./projects.module.css";
 
-function Projects ({ data }) {
+function Projects ({ data, pageContext }) {
+
+  if (!data) return <p>No Posts found!</p>;
   return(
     <Layout>
       <>
@@ -32,6 +36,11 @@ function Projects ({ data }) {
 
         ))}
         </div>
+        <Pagination
+          currentPage={pageContext.currentPage}
+          totalCount={data.allMarkdownRemark.totalCount}
+          pathPrefix="/projects/"
+        />
       </>
     </Layout>
   )
@@ -40,7 +49,7 @@ function Projects ({ data }) {
 export default Projects;
 
 export const query = graphql`
-  query {
+  query projectListQuery($skip: Int! = 0){
     site {
       siteMetadata {
         title
@@ -49,7 +58,9 @@ export const query = graphql`
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC },
       filter: {fileAbsolutePath: {regex: "\/projects/"}}
-      ) {
+      limit: 3,
+      skip: $skip
+    ){
       totalCount
       edges {
         node {
@@ -65,7 +76,7 @@ export const query = graphql`
           fields {
             slug
           }
-          excerpt
+          excerpt(pruneLength: 150)
         }
       }
     }
