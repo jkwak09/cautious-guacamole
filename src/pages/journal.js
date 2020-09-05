@@ -3,72 +3,51 @@ import Layout from "../components/layout";
 import Helmet from "react-helmet";
 import { Link, graphql } from "gatsby";
 
-import journalStyles from "./journal.module.css";
+import Pagination from "../components/pagination";
 
-function Journal ({ data }) {
-  console.log(data);
+function Journal ({ data, pageContext }) {
 
   return(
-
     <Layout>
       <>
-        <Helmet title={`Journal | ${data.site.siteMetadata.title}`} />
-        <h1>
-        Blog posts
+        <Helmet title={`Projects | ${data.site.siteMetadata.title}`}/>
+        <h1 className="page-title">
+        Journal
         </h1>
-
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-        <div className={journalStyles.postContainer}>
-        {data.allMarkdownRemark.edges.map(({ node }, index) => {
-            return(
-              <>
-              { index === 0
-              ?
-              <div key={node.id} className={journalStyles.postSticky}>
-                <Link to={`/journal${node.fields.slug}`}>
-                  <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} />
-                  <p>{node.frontmatter.tags}</p>
-                  <h3>
-                    {node.frontmatter.title}{" "}
-                    <span>
-                      — {node.frontmatter.date}
-                    </span>
-                  </h3>
-                  </Link>
-                  <p>{node.excerpt}</p>
-              </div>
-          :
-              // This is the rest of the posts
-              <div key={node.id} className={journalStyles.postScroll}>
+        <div className="">
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+            <div key={node.id} className="">
               <Link to={`/journal${node.fields.slug}`}>
-                <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} className={journalStyles.journalPostImage} />
-                <div className={journalStyles.journalPostDescription}>
-                <p>{node.frontmatter.tags}</p>
-                <h3>
-                  {node.frontmatter.title}{" "}
-                  <span>
-                    — {node.frontmatter.date}
-                  </span>
+                <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} className="" />
+                <h3 className="">
+                  {node.frontmatter.title}
                 </h3>
-                <p>{node.excerpt}</p>
+                <div className="">
+                  {node.frontmatter.date}
                 </div>
-                </Link>
+                <p className="">{node.excerpt}</p>
+              </Link>
+              <p>{node.frontmatter.tags}</p>
             </div>
-            }
-            </>
-            );
-          }
-        )}
+
+        ))}
         </div>
-        </>
+        <Pagination
+          currentPage={pageContext.currentPage}
+          totalCount={data.allMarkdownRemark.totalCount}
+          pathPrefix="/journal/"
+        />
+      </>
     </Layout>
   )
 };
 
+
 export default Journal;
 
 export const query = graphql`
-  query {
+  query blogListQuery($skip: Int! = 0){
     site {
       siteMetadata {
         title
@@ -77,6 +56,8 @@ export const query = graphql`
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC },
       filter: {fileAbsolutePath: {regex: "\/blogs/"}}
+      limit: 3,
+      skip: $skip
       ) {
       totalCount
       edges {
