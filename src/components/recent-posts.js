@@ -41,7 +41,7 @@ function RecentPosts () {
   )
   return(
     <>
-      <h2>Recent Posts</h2>
+      <h2 className="page-title">Recent Posts</h2>
       <div className={recentPostStyles.recentPostsContainer}>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <>
