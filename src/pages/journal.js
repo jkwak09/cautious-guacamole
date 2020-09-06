@@ -22,9 +22,9 @@ function Journal ({ data, pageContext }) {
             <div key={node.id} className={journalStyles.journalPostContainer}>
               <div className={journalStyles.journalImageContainer}>
                 <Link to={`/journal${node.fields.slug}`}>
-                  <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} className="" />
+                  <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} className={journalStyles.journalPostImage} />
                 </Link>
-                <div className="">
+                <div className={journalStyles.journalPostDate}>
                   {node.frontmatter.date}
                 </div>
                 <p>{node.frontmatter.tags}</p>
