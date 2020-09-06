@@ -58,7 +58,7 @@ export const query = graphql`
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC },
       filter: {fileAbsolutePath: {regex: "\/projects/"}}
-      limit: 3,
+      limit: 12,
       skip: $skip
     ){
       totalCount
