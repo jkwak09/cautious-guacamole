@@ -106,14 +106,14 @@ async function paginate({
   );
 
   const { totalCount } = data.allMarkdownRemark;
-  const pages = Math.ceil(totalCount / 3);
+  const pages = Math.ceil(totalCount / 9);
 
   Array.from({ length: pages }).forEach((_, i) => {
     actions.createPage({
       path: `${pathPrefix}${i + 1}`,
       component,
       context: {
-        skip: i * 3,
+        skip: i * 12,
         currentPage: i + 1,
       },
     });
