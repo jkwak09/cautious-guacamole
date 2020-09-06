@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
+import paginationStyles from "./pagination.module.css";
 
 function Pagination({
   totalCount,
@@ -13,23 +14,27 @@ function Pagination({
   const prevPage = currentPage - 1;
 
   return (
-      <>
-      <Link
-        disabled={prevPage <= 0 ? true : null}
-        to={`${pathPrefix}${prevPage}`}
-      >
-        {prevPage <= 0 ? `` : `← Previous`}
-      </Link>
-      <p>
-        Page {currentPage} of {totalPages}
-      </p>
-      <Link
-        disabled={nextPage > totalPages ? true : null}
-        to={nextPage > totalPages ? null : `${pathPrefix}${nextPage}`}
-      >
-        {nextPage > totalPages ? `No more posts` : `Next →`}
-      </Link>
-      </>
+      <div className={paginationStyles.paginationContainer}>
+        <Link
+          disabled={prevPage <= 0 ? true : null}
+          to={`${pathPrefix}${prevPage}`}
+        >
+          <span>
+            {prevPage <= 0 ? `` : `← Previous`}
+          </span>
+        </Link>
+        <span>
+          Page {currentPage} of {totalPages}
+        </span>
+        <Link
+          disabled={nextPage > totalPages ? true : null}
+          to={nextPage > totalPages ? null : `${pathPrefix}${nextPage}`}
+        >
+          <span>
+            {nextPage > totalPages ? `No more posts` : `Next →`}
+          </span>
+        </Link>
+      </div>
   );
 }
 

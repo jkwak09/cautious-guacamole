@@ -1,3 +1,6 @@
-.disabled-link {
-  pointer-events: none;
+.paginationContainer{
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
 }
