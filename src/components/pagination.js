@@ -9,7 +9,7 @@ function Pagination({
   pathPrefix,
 }) {
 
-  const totalPages = Math.ceil(totalCount / 3);
+  const totalPages = Math.ceil(totalCount / 12);
   const nextPage = currentPage + 1;
   const prevPage = currentPage - 1;
 
