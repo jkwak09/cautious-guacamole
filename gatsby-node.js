@@ -1,4 +1,5 @@
 const path = require(`path`);
+const _ = require("lodash")
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 async function makeProjectPosts ({ graphql, actions }) {
@@ -120,11 +121,57 @@ async function paginate({
   });
 }
 
+async function makeTagPosts ({ graphql, actions }) {
+  const tagTemplate = path.resolve("src/templates/tags.js");
+
+  const { errors, data } = await graphql(`
+    {
+      postsRemark: allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 2000
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              tags
+            }
+          }
+        }
+      }
+      tagsGroup: allMarkdownRemark(limit: 2000) {
+        group(field: frontmatter___tags) {
+          fieldValue
+        }
+      }
+    }
+  `);
+
+  if (errors) {
+    throw new Error('There was an error');
+  }
+
+  const tags = data.tagsGroup.group
+  // Make tag pages
+  tags.forEach(tag => {
+    actions.createPage({
+      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+      component: tagTemplate,
+      context: {
+        tag: tag.fieldValue,
+      },
+    })
+  })
+}
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   await Promise.all([
     makeProjectPosts({ graphql, actions }),
     makeBlogPosts({ graphql, actions }),
+    makeTagPosts ({ graphql, actions }),
     paginate({
       graphql,
       actions,
