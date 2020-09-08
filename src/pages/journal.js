@@ -27,7 +27,14 @@ function Journal ({ data, pageContext }) {
                 <div className={journalStyles.journalPostDate}>
                   {node.frontmatter.date}
                 </div>
-                <p>{node.frontmatter.tags}</p>
+                {node.frontmatter.tags.map((tag, i) => {
+                  return(
+                    <Link to={`/tags/${tag}`}>
+                      <p key={i}>{tag}</p>
+                    </Link>
+                  )
+                })
+                }
               </div>
               <div className={journalStyles.journalExcerptContainer}>
                 <Link to={`/journal${node.fields.slug}`}>
