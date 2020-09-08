@@ -1,6 +1,7 @@
 .journalPostContainer{
   display: flex;
   flex-wrap: wrap;
+  margin: 15px 0;
 }
 
 .journalImageContainer{
@@ -28,6 +29,18 @@
 .journalPostImage{
   margin: 0;
   padding: 0;
+}
+
+ul.journalTags{
+  display: block;
+  list-style: none;
+  margin: 0;
+}
+
+.journalTag{
+  display: inline-block;
+  float: left;
+  padding-right: 10px;
 }
 
 /*
