@@ -31,7 +31,14 @@ function Projects ({ data, pageContext }) {
                 </div>
                 <p className={projectPostStyles.projectPostExcerpt}>{node.excerpt}</p>
               </Link>
-              <p>{node.frontmatter.tags}</p>
+              {node.frontmatter.tags.map((tag, i) => {
+                  return(
+                    <Link to={`/tags/${tag}`}>
+                      <p key={i}>{tag}</p>
+                    </Link>
+                  )
+                })
+              }
             </div>
 
         ))}
