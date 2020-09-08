@@ -38,7 +38,6 @@ ul.journalTags{
 }
 
 .journalTag{
-  display: inline-block;
   float: left;
   padding-right: 10px;
 }
