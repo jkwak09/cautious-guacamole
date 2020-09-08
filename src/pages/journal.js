@@ -27,14 +27,16 @@ function Journal ({ data, pageContext }) {
                 <div className={journalStyles.journalPostDate}>
                   {node.frontmatter.date}
                 </div>
-                {node.frontmatter.tags.map((tag, i) => {
-                  return(
-                    <Link to={`/tags/${tag}`}>
-                      <p key={i}>{tag}</p>
-                    </Link>
-                  )
-                })
-                }
+                <ul className={journalStyles.journalTags}>
+                  {node.frontmatter.tags.map((tag, i) => {
+                    return(
+                      <Link to={`/tags/${tag}`}>
+                        <li className={journalStyles.journalTag} key={i}>{tag}</li>
+                      </Link>
+                    )
+                  })
+                  }
+                </ul>
               </div>
               <div className={journalStyles.journalExcerptContainer}>
                 <Link to={`/journal${node.fields.slug}`}>
