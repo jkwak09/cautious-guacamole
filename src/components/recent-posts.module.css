@@ -18,6 +18,10 @@
   .recentPostDate {
     font-size: medium;
   }
+
+  .recentPostExcerpt{
+    margin-top: 10px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -32,10 +36,12 @@
 
   .recentPostTitle{
     font-size: xx-large;
+    margin-top: -10px;
   }
 
   .recentPostExcerpt{
     font-size: large;
+    margin-top: 10px;
   }
   .recentPostDate {
     font-size: small;
@@ -60,6 +66,7 @@
 
   .recentPostTitle{
     font-size: x-large;
+
   }
 
   .recentPostExcerpt{
