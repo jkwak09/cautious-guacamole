@@ -32,7 +32,7 @@ function RecentPosts () {
               fields {
                 slug
               }
-              excerpt
+              excerpt(pruneLength: 150)
             }
           }
         }
@@ -50,14 +50,16 @@ function RecentPosts () {
             <div key={node.id} className={recentPostStyles.recentPost}>
               <Link to={`/projects${node.fields.slug}`}>
                 <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} className={recentPostStyles.recentPostImage} />
+
                 <h3 className={recentPostStyles.recentPostTitle}>
                   {node.frontmatter.title}
                 </h3>
+              </Link>
                 <div className={recentPostStyles.recentPostDate}>
                   {node.frontmatter.date}
                 </div>
                 <p className={recentPostStyles.recentPostExcerpt}>{node.excerpt}</p>
-              </Link>
+
             </div>
             :
             <div key={node.id} className={recentPostStyles.recentPost}>
@@ -66,11 +68,12 @@ function RecentPosts () {
                 <h3 className={recentPostStyles.recentPostTitle}>
                   {node.frontmatter.title}
                 </h3>
+                </Link>
                 <div className={recentPostStyles.recentPostDate}>
                   {node.frontmatter.date}
                 </div>
                 <p className={recentPostStyles.recentPostExcerpt}>{node.excerpt}</p>
-              </Link>
+
             </div>
           }
         </>
