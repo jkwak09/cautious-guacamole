@@ -38,6 +38,18 @@ module.exports = {
       options: {
         path: `./src/images/`
       }
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Proza Libre`,
+            variants: ['600']
+          },
+
+        ],
+      },
     }
   ],
 }
