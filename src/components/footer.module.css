@@ -13,6 +13,7 @@
 
 .copyright{
   font-size: small;
+  font-weight: 600;
 }
 
 .footerContainer{
@@ -20,6 +21,7 @@
   /* border: 5px solid green; */
   width: 100vw;
   background-color: lightcoral;
+  position: absolute;
 }
 
 /*

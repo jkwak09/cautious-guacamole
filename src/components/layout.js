@@ -8,7 +8,7 @@ function Layout({ children }) {
   return (
     <div className={layoutStyles.layoutContainer} id="outer-container">
       <Header />
-      <main id="page-wrap" style={{ paddingBottom: `2.5rem` }}>
+      <main id="page-wrap" style={{ paddingBottom: `8rem` }}>
         {children}
       </main>
       <Footer />
