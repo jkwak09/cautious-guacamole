@@ -1,6 +1,10 @@
 
 .profilePicture {
-  border-radius: 50%;
+  border-radius: 50% 50% 0% 0%;
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+  border: 15px solid pink;
 }
 
 
@@ -40,13 +44,15 @@
 .aboutBody{
   display: flex;
   justify-content: space-between;
+  overflow: auto;
+  height: 60vh;
 }
 
 .aboutText{
   margin-left: 3rem;
   width: 65%;
-  height: 150vh;
-  display: inline-block;
+  height: 100%;
+  /* display: inline-block; */
 }
 
 .aboutImage{
@@ -54,6 +60,8 @@
   position: sticky;
   top: 0;
   width: 25%;
-  height: 25vh;
-  display: inline-block;
+  /* height: 25vh; */
+  /* display: inline-block; */
+  align-self: flex-start;
+  height: auto;
 }
