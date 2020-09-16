@@ -29,7 +29,7 @@ function Header() {
           <h3 className={headerStyles.siteTitle} style={{ display: `inline` }}>{data.site.siteMetadata.title}</h3>
           </Link>
           <ul className={headerStyles.navList}>
-            <ListLink to="/">Home</ListLink>
+            {/* <ListLink to="/">Home</ListLink> */}
             <ListLink to="/journal/">Journal</ListLink>
             <ListLink to="/projects/">Projects</ListLink>
             <ListLink to="/about/">About</ListLink>
