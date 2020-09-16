@@ -12,15 +12,15 @@ function Pagination({
   const totalPages = Math.ceil(totalCount / 12);
   const nextPage = currentPage + 1;
   const prevPage = currentPage - 1;
-
+  console.log('previous page ------>',prevPage);
   return (
       <div className={paginationStyles.paginationContainer}>
         <Link
-          disabled={prevPage <= 0 ? true : null}
-          to={`${pathPrefix}${prevPage}`}
+          disabled={prevPage < 1 ? true : null}
+          to={prevPage < 1 ? null : `${pathPrefix}${prevPage}`}
         >
           <span>
-            {prevPage <= 0 ? `` : `← Previous`}
+            {prevPage < 1 ? `☻` : `← Newer`}
           </span>
         </Link>
         <span>
@@ -31,7 +31,7 @@ function Pagination({
           to={nextPage > totalPages ? null : `${pathPrefix}${nextPage}`}
         >
           <span>
-            {nextPage > totalPages ? `No more posts` : `Next →`}
+            {nextPage > totalPages ? `No more posts` : `Older →`}
           </span>
         </Link>
       </div>
