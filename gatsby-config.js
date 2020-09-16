@@ -44,10 +44,13 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Proza Libre`,
+            family: `Archivo`,
             variants: ['600']
           },
-
+          {
+            family: `Bitter`,
+            variants: ['400', '700']
+          },
         ],
       },
     }
