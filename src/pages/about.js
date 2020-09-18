@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 
-import Image from "../components/image.js"
+// import Image from "../components/image.js"
 
 import aboutStyles from "./about.module.css";
 
@@ -12,7 +12,7 @@ function About({ data }) {
     <Layout>
       <>
         <Helmet title={`About | ${data.site.siteMetadata.title}`} />
-        <h1 className="page-title">About {data.site.siteMetadata.title}</h1>
+        {/* <h1 className="page-title">About {data.site.siteMetadata.title}</h1>
         <div className={aboutStyles.aboutBody}>
         <div className={aboutStyles.aboutImage}>
         <Image alt="me" class={aboutStyles.profilePicture} filename="me.jpg" />
@@ -25,6 +25,48 @@ function About({ data }) {
         <h3>About this site</h3>
         <p>Created using: </p>
         </div>
+        </div> */}
+
+        <div class={aboutStyles.parallax}>
+
+          <div class={`${aboutStyles.parallaxGroup} ${aboutStyles.group1}`}>
+            <div class={`${aboutStyles.parallaxBase} ${aboutStyles.group1Base} ${aboutStyles.parallaxLayer}`}>
+              <div class={aboutStyles.pText}>About {data.site.siteMetadata.title}</div>
+            </div>
+          </div>
+
+          <div class={`${aboutStyles.parallaxGroup} ${aboutStyles.group2}`}>
+            <div class={`${aboutStyles.parallaxBase} ${aboutStyles.parallaxLayer}`}>
+              <div class={aboutStyles.pText}>GROUP 2 BASE</div>
+            </div>
+            <div class={`${aboutStyles.parallaxBack} ${aboutStyles.group2Back} ${aboutStyles.parallaxLayer}`}>
+              <div class={aboutStyles.pText}>Group 2 BACK</div>
+            </div>
+          </div>
+
+          <div class={`${aboutStyles.parallaxGroup} ${aboutStyles.group3}`}>
+            <div class={`${aboutStyles.parallaxBase} ${aboutStyles.group3Base} ${aboutStyles.parallaxLayer}`}>
+              <div class={aboutStyles.pText}>Group 3 BASE</div>
+            </div>
+          </div>
+
+          <div class={`${aboutStyles.parallaxGroup} ${aboutStyles.group4}`}>
+            <div class={`${aboutStyles.parallaxBase} ${aboutStyles.parallaxLayer}`}>
+              <div class={aboutStyles.pText}>GROUP 4 BASE</div>
+            </div>
+            <div class={`${aboutStyles.parallaxBack} ${aboutStyles.group4Back} ${aboutStyles.parallaxLayer}`}>
+              <div class={aboutStyles.pText}>Group 4 BACK</div>
+            </div>
+          </div>
+
+          <div class={`${aboutStyles.parallaxGroup} ${aboutStyles.group5}`}>
+            <div class={`${aboutStyles.parallaxBase} ${aboutStyles.group5Base} ${aboutStyles.parallaxLayer}`}>
+              <div class={aboutStyles.pText}>Group 5 BASE</div>
+            </div>
+          </div>
+
+
+
         </div>
       </>
     </Layout>

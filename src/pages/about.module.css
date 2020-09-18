@@ -65,3 +65,103 @@
   align-self: flex-start;
   height: auto;
 }
+
+
+/*
+* PARALLAX ****************************************
+*/
+
+.parallax {
+  position: relative;
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective-origin-x: 100%;
+}
+
+.parallaxLayer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transform-origin-x: 100%;
+}
+
+/* .parallaxFront {
+  -webkit-transform: translateZ(90px) scale(.7);
+  transform: translateZ(90px) scale(.7);
+  z-index: 100;
+} */
+
+.parallaxBase {
+  transform: translateZ(0);
+  z-index: 4;
+}
+
+.parallaxBack {
+  transform: translateZ(-1px) scale(2);
+  z-index: 3;
+}
+/*
+.parallaxDeep {
+  transform: translateZ(-600px) scale(3);
+  z-index: 2;
+} */
+
+.parallaxGroup {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.pText{
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+}
+
+.group1 {
+  z-index: 5;
+}
+
+.group1Base{
+  background-color: darkorange;
+}
+
+.group2 {
+  z-index: 3;
+}
+
+.group2Back {
+  background-color: darksalmon;
+}
+
+.group3 {
+  z-index: 4;
+}
+
+.group3Base{
+  background-color: coral;
+}
+
+.group4 {
+  z-index: 2;
+}
+
+.group4Back {
+  background-color: cornflowerblue;
+}
+
+.group5{
+  z-index: 3;
+}
+
+.group5Base{
+  background-color: powderblue;
+}
