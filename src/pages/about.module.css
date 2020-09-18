@@ -78,6 +78,7 @@
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-perspective-origin-x: 100%;
+  margin-bottom: 15px;
 }
 
 .parallaxLayer {
