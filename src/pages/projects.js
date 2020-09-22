@@ -17,7 +17,7 @@ function Projects ({ data, pageContext }) {
         <h1 className="page-title">
         Projects
         </h1>
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+        <h4 className={projectPostStyles.totalPosts}>{data.allMarkdownRemark.totalCount} Posts</h4>
         <div className={projectPostStyles.projectPostsContainer}>
         {data.allMarkdownRemark.edges.map(({ node }) => (
             <div key={node.id} className={projectPostStyles.projectPost}>
@@ -31,14 +31,16 @@ function Projects ({ data, pageContext }) {
                 </div>
                 <p className={projectPostStyles.projectPostExcerpt}>{node.excerpt}</p>
               </Link>
-              {node.frontmatter.tags.map((tag, i) => {
-                  return(
-                    <Link to={`/tags/${tag}`}>
-                      <p key={i}>{tag}</p>
-                    </Link>
-                  )
-                })
-              }
+              <ul className={projectPostStyles.projectTags}>
+                {node.frontmatter.tags.map((tag, i) => {
+                    return(
+                      <Link to={`/tags/${tag}`}>
+                        <li className={projectPostStyles.projectTag} key={i}>{tag}</li>
+                      </Link>
+                    )
+                  })
+                }
+              </ul>
             </div>
 
         ))}
