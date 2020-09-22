@@ -45,11 +45,14 @@ module.exports = {
         fonts: [
           {
             family: `Archivo`,
-            variants: ['600']
+            variants: ['600', '700']
           },
           {
             family: `Bitter`,
             variants: ['400', '700']
+          },
+          {
+            family: `Archivo Black`,
           },
         ],
       },

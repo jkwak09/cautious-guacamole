@@ -1,28 +1,38 @@
 import Typography from "typography";
-// import moragaTheme from 'typography-theme-moraga';
-// import url('https://fonts.googleapis.com/css2?family=Proza+Libre:wght@600&display=swap');
 
 const typography = new Typography(
   {
   googleFonts: [
     {
-      name: 'Proza Libre',
+      name: 'Archivo',
       styles: [
-        '600',
+        '600', '700'
+      ],
+    },
+    {
+      name: 'Bitter',
+      styles: [
+        '400',
+      ],
+    },
+    {
+      name: 'Archivo Black',
+      styles: [
       ],
     },
   ],
   baseFontSize: "18px",
   baseLineHeight: 1.56,
   headerFontFamily: [
-    "Proza Libre",
+    "Archivo",
     // "Helvetica Neue",
     // "Segoe UI",
     // "Helvetica",
     // "Arial",
     "sans-serif",
   ],
-  bodyFontFamily: ["Georgia", "serif"],
+  bodyFontFamily: ["Bitter","serif"],
+  headerWeight: 600,
 }
 // moragaTheme
 );
