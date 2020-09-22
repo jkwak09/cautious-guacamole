@@ -16,7 +16,7 @@ function Journal ({ data, pageContext }) {
         <h1 className="page-title">
         Journal
         </h1>
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+        <h4 className={journalStyles.totalPosts}>{data.allMarkdownRemark.totalCount} Posts</h4>
         <div className="">
         {data.allMarkdownRemark.edges.map(({ node }) => (
             <div key={node.id} className={journalStyles.journalPostContainer}>
