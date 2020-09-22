@@ -10,6 +10,25 @@
   margin-top: 10px;
 }
 
+.projectTags{
+  display: flex;
+  list-style: none;
+  margin: 0;
+  justify-content: flex-start;
+}
+
+.projectTag{
+  display: inline-block;
+  margin-right: 5px;
+  font-size: small;
+  color: #fff;
+  background-color: #000;
+  padding: 1px 5px;
+}
+
+.totalPosts {
+  font-size: small;
+}
 
 /*
 * MEDIA BREAKPOINTS *********************************
@@ -39,6 +58,10 @@
   }
 
   .projectPostDate{
+    font-size: medium;
+  }
+
+  .projectTag{
     font-size: medium;
   }
 }
