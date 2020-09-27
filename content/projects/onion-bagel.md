@@ -1,7 +1,7 @@
 ---
 path: "🧅 🥯 "
 date: 2020-09-27T14:47:29.998Z
-title: "Onion Bagel "
+title: "🧅 🥯 "
 posttype: project
 thumbnail: /assets/project-post-aspect-ratio
 altText: test
