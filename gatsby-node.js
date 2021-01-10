@@ -95,7 +95,7 @@ async function makePlantPosts ({ graphql, actions }) {
     query {
       allMarkdownRemark (
         sort: { order: DESC, fields: [frontmatter___date] },
-        filter: {fileAbsolutePath: {regex: "\/plants/"}}
+        filter: { frontmatter: { posttype: { eq: "plants" } } },
       ){
         edges {
           node {
@@ -215,7 +215,7 @@ exports.createPages = async ({ graphql, actions }) => {
     makeProjectPosts({ graphql, actions }),
     makeBlogPosts({ graphql, actions }),
     makeTagPosts ({ graphql, actions }),
-    makePlantPosts ({ graphql, action }),
+    makePlantPosts ({ graphql, actions }),
     paginate({
       graphql,
       actions,
@@ -233,7 +233,7 @@ exports.createPages = async ({ graphql, actions }) => {
     paginate({
       graphql,
       actions,
-      collection: 'plant',
+      collection: 'plants',
       pathPrefix: '/plants/',
       component: path.resolve('./src/pages/plants.js'),
     }),

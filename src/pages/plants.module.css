@@ -1,37 +1,16 @@
-.plantPostContainer{
-  display: flex;
-  flex-wrap: wrap;
-  margin: 15px 0;
-}
-
-.plantImageContainer{
-  flex: 1 0 30%;
-
-}
-
-.plantExcerptContainer{
-  flex: 1 0 70%;
-  padding-left: 15px;
-}
-
-.plantDivider{
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: burlywood;
-  flex: 2 0 100%;
-}
-
-.plantPostDate{
-  font-size: small;
-}
 
 .plantPostImage{
-  margin: 0;
-  padding: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
-ul.plantTags{
+.plantPostExcerpt{
+  color: black;
+  margin-top: 10px;
+}
+
+.plantTags{
   display: flex;
   list-style: none;
   margin: 0;
@@ -58,21 +37,93 @@ ul.plantTags{
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
+  .plantPostsContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .plantPost{
+    display: inline-block;
+    flex: 0 0 100%;
+  }
+
+  .plantPostsContainer{
+    font-size: large;
+  }
+
+  .plantPostTitle{
+    font-size: xx-large;
+  }
+
+  .plantPostDate{
+    font-size: medium;
+  }
+
+  .plantTag{
+    font-size: medium;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 
+  .plantPostsContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .plantPost{
+    display: inline-block;
+    flex: 0 0 47%;
+  }
+
+  .plantPostsContainer{
+    font-size: medium;
+  }
+
+  .plant-post-title{
+    font-size: x-large;
+  }
+
+  .plant-post-date{
+    font-size: small;
+  }
 }
 
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
+  .plantPost{
+    flex: 0 0 30%;
+  }
+
+  .plantPostsContainer{
+    font-size: medium;
+  }
+
+  .plantPostTitle{
+    font-size: x-large;
+  }
+
+  .plantPostDate{
+    font-size: small;
+  }
+
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+
+.plantPost{
+  flex: 0 0 23%;
+}
+
 
 
 }
@@ -80,5 +131,9 @@ ul.plantTags{
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
-}
 
+  .plantPost{
+    width:100%;
+  }
+
+}

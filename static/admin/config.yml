@@ -38,14 +38,14 @@ collections:
       - { name: body, label: Body, widget: markdown }
 
   - name: plant-post
-    label: Plant
+    label: Plants
     folder: 'content/plants'
     create: true
     fields:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
-      - { name: posttype, label: Post Type, widget: "string", default: project }
+      - { name: posttype, label: Post Type, widget: "string", default: plants }
       - { name: thumbnail, label: "Featured Image", widget: "image" }
       - { name: altText, label: "Featured Image Description", widget: "string" }
       - { name: tags, label: Tags, widget: list }

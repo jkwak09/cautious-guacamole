@@ -15,6 +15,7 @@ function RecentPosts () {
         },
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC },
+          filter: { frontmatter: { posttype: { eq: "blog" } } },
           limit: 4
           ) {
           totalCount

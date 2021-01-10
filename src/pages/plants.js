@@ -5,48 +5,42 @@ import { Link, graphql } from "gatsby";
 
 import Pagination from "../components/pagination";
 
-import plantStyles from "./plants.module.css";
+import plantPostStyles from "./plants.module.css";
 
 function Plants ({ data, pageContext }) {
 
+  if (!data) return <p>No Plants found!</p>;
   return(
     <Layout>
       <>
-        <Helmet title={`Projects | ${data.site.siteMetadata.title}`}/>
+        <Helmet title={`Plants | ${data.site.siteMetadata.title}`}/>
         <h1 className="page-title">
         Plants
         </h1>
-        <h4 className={plantStyles.totalPosts}>{data.allMarkdownRemark.totalCount} Plants</h4>
-        <div className="">
+        <h4 className={plantPostStyles.totalPosts}>{data.allMarkdownRemark.totalCount} Posts</h4>
+        <div className={plantPostStyles.plantPostsContainer}>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-            <div key={node.id} className={plantStyles.plantPostContainer}>
-              <div className={plantStyles.plantImageContainer}>
-                <Link to={`/plants${node.fields.slug}`}>
-                  <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} className={plantStyles.plantPostImage} />
-                </Link>
-                <div className={plantStyles.plantPostDate}>
+            <div key={node.id} className={plantPostStyles.plantPost}>
+              <Link to={`/plants${node.fields.slug}`}>
+                <img src={node.frontmatter.thumbnail}  alt={node.frontmatter.altText} className={plantPostStyles.plantpostImage} />
+                <h3 className={plantPostStyles.plantPostTitle}>
+                  {node.frontmatter.title}
+                </h3>
+                <div className={plantPostStyles.plantPostDate}>
                   {node.frontmatter.date}
                 </div>
-                <ul className={plantStyles.plantTags}>
-                  {node.frontmatter.tags.map((tag, i) => {
+                <p className={plantPostStyles.plantPostExcerpt}>{node.excerpt}</p>
+              </Link>
+              <ul className={plantPostStyles.plantTags}>
+                {node.frontmatter.tags.map((tag, i) => {
                     return(
                       <Link to={`/tags/${tag}`}>
-                        <li className={plantStyles.journalTag} key={i}>{tag}</li>
+                        <li className={plantPostStyles.plantTag} key={i}>{tag}</li>
                       </Link>
                     )
                   })
-                  }
-                </ul>
-              </div>
-              <div className={plantStyles.plantExcerptContainer}>
-                <Link to={`/plants${node.fields.slug}`}>
-                  <h3 className="">
-                    {node.frontmatter.title}
-                  </h3>
-                </Link>
-                <p className="">{node.excerpt}</p>
-              </div>
-              <div className={plantStyles.postDivider}></div>
+                }
+              </ul>
             </div>
 
         ))}
@@ -61,7 +55,6 @@ function Plants ({ data, pageContext }) {
   )
 };
 
-
 export default Plants;
 
 export const query = graphql`
@@ -73,10 +66,10 @@ export const query = graphql`
     },
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC },
-      filter: {fileAbsolutePath: {regex: "\/plants/"}}
+      filter: { frontmatter: { posttype: { eq: "plants" } } },
       limit: 12,
       skip: $skip
-      ) {
+    ){
       totalCount
       edges {
         node {
@@ -87,11 +80,12 @@ export const query = graphql`
             tags
             thumbnail
             altText
+            posttype
           }
           fields {
             slug
           }
-          excerpt
+          excerpt(pruneLength: 150)
         }
       }
     }

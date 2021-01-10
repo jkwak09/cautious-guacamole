@@ -20,7 +20,7 @@ const Tags = ({ pageContext, data }) => {
               const { slug } = node.fields
               const { title } = node.frontmatter
               const postType = node.frontmatter.posttype
-              const pathPrefix = postType === 'project' ? `/projects` : `/journal`;
+              const pathPrefix = postType === 'project' ? `/projects` : postType === 'blog' ? '/journal' : '/plants';
               return (
                 <li key={slug}>
                   <Link to={`${pathPrefix}${slug}`} >{title}</Link>
