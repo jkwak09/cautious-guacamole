@@ -7,5 +7,6 @@ thumbnail: /assets/match.cloche.smoke.jpg
 altText: Placeholder
 tags:
   - sansevieria
+  - plants
 ---
 lalalalalalalalala
