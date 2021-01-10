@@ -32,6 +32,7 @@ function Header() {
             {/* <ListLink to="/">Home</ListLink> */}
             <ListLink to="/journal/">Journal</ListLink>
             <ListLink to="/projects/">Projects</ListLink>
+            <ListLink to="/plants/">Plants</ListLink>
             <ListLink to="/about/">About</ListLink>
           </ul>
           <BurgerMenu className={headerStyles.burger} />

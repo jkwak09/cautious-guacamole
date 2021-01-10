@@ -3,21 +3,28 @@ import Helmet from "react-helmet";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 
-export default function BlogPost({ data, pageContext }) {
+export default function PlantPost({ data, pageContext }) {
   const post = data.markdownRemark;
   const { next, prev } = pageContext;
   return (
     <Layout>
       <div>
-        <Helmet title={`${post.frontmatter.title} | Journal | ${data.site.siteMetadata.title}`} />
+        <Helmet title={`${post.frontmatter.title} | Plants | ${data.site.siteMetadata.title}`} />
         <h1>{post.frontmatter.title}</h1>
-        {/* This is the post */}
+        {
+          post.frontmatter.tags.map((tag, index) => {
+            return (
+              <span key={index}>
+                <Link to={`/tags/${tag}`}>
+                  <small>{tag}</small>
+                </Link>
+              </span>
+            );
+          })
+        }
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        {/* This will display related posts */}
-        <div className="related-blog-posts">
-          Related blog posts will appear here.
-        </div>
       </div>
+
       <div>
         {
           prev === null ? `☻`:
@@ -33,7 +40,7 @@ export default function BlogPost({ data, pageContext }) {
         <span>
           |
         </span>
-        {next === null ? `No more posts.` :
+        {next === null ? `No more projects.` :
           <Link
           // disabled={next === null ? true : null}
           to={`${pageContext.pathPrefix}${next.fields.slug}`}
@@ -55,6 +62,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        tags
       }
     },
     site {

@@ -7,7 +7,7 @@ async function makeProjectPosts ({ graphql, actions }) {
   const { errors, data } = await graphql(`
     query {
       allMarkdownRemark (
-        sort: { fields: [frontmatter___date], order: DESC },
+        sort: { order: DESC, fields: [frontmatter___date] },
         filter: {fileAbsolutePath: {regex: "\/projects/"}}
       ){
         edges {
@@ -17,6 +17,7 @@ async function makeProjectPosts ({ graphql, actions }) {
             }
             frontmatter {
               posttype
+              title
             }
           }
         }
@@ -30,16 +31,14 @@ async function makeProjectPosts ({ graphql, actions }) {
 
   const projectPosts = data.allMarkdownRemark.edges;
   projectPosts.forEach(({ node }, i) => {
-    const prev = projectPosts[i - 1];
-    const next = projectPosts[i + 1];
     actions.createPage({
       path: `/projects${node.fields.slug}`,
       component: path.resolve(`./src/templates/project-post.js`),
       context: {
         slug: node.fields.slug,
         collection: 'project-post',
-        prev,
-        next,
+        prev: i === 0 ? null : projectPosts[i - 1].node,
+        next: i === projectPosts.length - 1 ? null : projectPosts[i + 1].node,
         pathPrefix: '/projects',
       },
     });
@@ -61,6 +60,7 @@ async function makeBlogPosts ({ graphql, actions }) {
             }
             frontmatter {
               posttype
+              title
             }
           }
         }
@@ -73,17 +73,60 @@ async function makeBlogPosts ({ graphql, actions }) {
   const blogPosts = data.allMarkdownRemark.edges;
 
   blogPosts.forEach(({ node }, i) => {
-    const prev = blogPosts[i - 1];
-    const next = blogPosts[i + 1];
+    // const prev = blogPosts[i - 1];
+    // const next = blogPosts[i + 1];
     actions.createPage({
       path: `/journal${node.fields.slug}`,
       component: path.resolve(`./src/templates/blog-post.js`),
       context: {
         slug: node.fields.slug,
         collection: 'blog-post',
-        prev,
-        next,
+        prev: i === 0 ? null : blogPosts[i - 1].node,
+        next: i === blogPosts.length - 1 ? null : blogPosts[i + 1].node,
         pathPrefix: '/journal',
+      },
+    });
+  });
+}
+
+async function makePlantPosts ({ graphql, actions }) {
+  const projectPost = path.resolve('./src/templates/plant-post.js');
+  const { errors, data } = await graphql(`
+    query {
+      allMarkdownRemark (
+        sort: { order: DESC, fields: [frontmatter___date] },
+        filter: {fileAbsolutePath: {regex: "\/plants/"}}
+      ){
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              posttype
+              title
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  if (errors) {
+    throw new Error('There was an error');
+  }
+
+  const plantPosts = data.allMarkdownRemark.edges;
+  plantPosts.forEach(({ node }, i) => {
+    actions.createPage({
+      path: `/plants${node.fields.slug}`,
+      component: path.resolve(`./src/templates/plant-post.js`),
+      context: {
+        slug: node.fields.slug,
+        collection: 'plant-post',
+        prev: i === 0 ? null : plantPosts[i - 1].node,
+        next: i === plantPosts.length - 1 ? null : plantPosts[i + 1].node,
+        pathPrefix: '/plants',
       },
     });
   });
@@ -172,6 +215,7 @@ exports.createPages = async ({ graphql, actions }) => {
     makeProjectPosts({ graphql, actions }),
     makeBlogPosts({ graphql, actions }),
     makeTagPosts ({ graphql, actions }),
+    makePlantPosts ({ graphql, action }),
     paginate({
       graphql,
       actions,
@@ -185,6 +229,13 @@ exports.createPages = async ({ graphql, actions }) => {
       collection: 'blog',
       pathPrefix: '/journal/',
       component: path.resolve('./src/pages/journal.js'),
+    }),
+    paginate({
+      graphql,
+      actions,
+      collection: 'plant',
+      pathPrefix: '/plants/',
+      component: path.resolve('./src/pages/plants.js'),
     }),
   ]);
 };

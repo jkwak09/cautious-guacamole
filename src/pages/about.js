@@ -31,16 +31,16 @@ function About({ data }) {
 
           <div class={`${aboutStyles.parallaxGroup} ${aboutStyles.group1}`}>
             <div class={`${aboutStyles.parallaxBase} ${aboutStyles.group1Base} ${aboutStyles.parallaxLayer}`}>
-              <div class={aboutStyles.pText}>About {data.site.siteMetadata.title}</div>
+              <div class={aboutStyles.pText}>About {data.site.siteMetadata.title} ↓</div>
             </div>
           </div>
 
           <div class={`${aboutStyles.parallaxGroup} ${aboutStyles.group2}`}>
             <div class={`${aboutStyles.parallaxBase} ${aboutStyles.parallaxLayer}`}>
-              <div class={aboutStyles.pText}>GROUP 2 BASE</div>
+              <div class={aboutStyles.pText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
             </div>
             <div class={`${aboutStyles.parallaxBack} ${aboutStyles.group2Back} ${aboutStyles.parallaxLayer}`}>
-              <div class={aboutStyles.pText}>Group 2 BACK</div>
+              <div class={aboutStyles.pTextBack}>JONATHAN KWAK</div>
             </div>
           </div>
 
@@ -55,7 +55,7 @@ function About({ data }) {
               <div class={aboutStyles.pText}>GROUP 4 BASE</div>
             </div>
             <div class={`${aboutStyles.parallaxBack} ${aboutStyles.group4Back} ${aboutStyles.parallaxLayer}`}>
-              <div class={aboutStyles.pText}>Group 4 BACK</div>
+              <div class={aboutStyles.pTextBack}>Group 4 BACK</div>
             </div>
           </div>
 
