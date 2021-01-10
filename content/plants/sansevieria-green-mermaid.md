@@ -1,5 +1,5 @@
 ---
-path: Sanseveria Green Mermaid
+path: sanseveria-green-mermaid
 date: 2021-01-10T00:55:24.900Z
 title: Sansevieria 'Green Mermaid'
 posttype: plants
