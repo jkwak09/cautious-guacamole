@@ -1,0 +1,11 @@
+---
+path: Sanseveria Green Mermaid
+date: 2021-01-10T00:55:24.900Z
+title: Sansevieria 'Green Mermaid'
+posttype: plant
+thumbnail: /assets/match.cloche.smoke.jpg
+altText: Placeholder
+tags:
+  - sansevieria
+---
+lalalalalalalalala
