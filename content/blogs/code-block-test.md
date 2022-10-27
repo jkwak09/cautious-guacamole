@@ -3,7 +3,7 @@ path: code-block-test
 date: 2020-08-23T03:45:44.538Z
 title: Code Block Test
 posttype: blog
-thumbnail: /assets/project-post-aspect-ratio
+thumbnail: /assets/4x3-post-image.png
 altText: cloche
 tags:
   - cloche
