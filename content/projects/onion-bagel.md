@@ -3,7 +3,7 @@ path: "🧅 🥯 "
 date: 2020-09-27T14:47:29.998Z
 title: "🧅 🥯 "
 posttype: project
-thumbnail: /assets/project-post-aspect-ratio
+thumbnail: /assets/4x3-post-image.png
 altText: test
 tags:
   - test
