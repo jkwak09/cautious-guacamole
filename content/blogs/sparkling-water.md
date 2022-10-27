@@ -3,7 +3,7 @@ path: sparkling-water
 date: 2020-07-27
 title: Sparkling Water
 posttype: blog
-thumbnail: /assets/project-post-aspect-ratio
+thumbnail: /assets/4x3-post-image.png
 altText: test
 tags:
   - food
