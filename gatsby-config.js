@@ -50,17 +50,9 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Archivo`,
-            variants: ['600', '700']
-          },
-          {
-            family: `Bitter`,
-            variants: ['400', '700']
-          },
-          {
-            family: `Archivo Black`,
-          },
+          `Archivo\:600,700`,
+          `Bitter\:400,700`,
+          `Archivo Black`
         ],
       },
     }
