@@ -1,6 +1,6 @@
 ---
 path: more-plants
-date: 2022-10-28T15:12:30.557Z
+date: 2022-10-27T15:12:30.557Z
 title: More Plants
 posttype: plants
 thumbnail: /assets/4x3-post-image.png
