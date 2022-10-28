@@ -74,7 +74,7 @@
 .parallax {
   position: relative;
   perspective: 1px;
-  height: 100vh;
+  height: 80vh;
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-perspective-origin-x: 100%;
@@ -113,7 +113,7 @@
 
 .parallaxGroup {
   position: relative;
-  height: 100vh;
+  height: 80vh;
   transform-style: preserve-3d;
 }
 
@@ -130,7 +130,7 @@
 }
 
 .pTextBack {
-  /* font-family: 'Archivo Black'; */
+  font-family: 'Archivo Black';
   font-size: 72pt;
   font-weight: 700;
   text-align: center;
@@ -139,7 +139,7 @@
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  -webkit-text-stroke: 3px rgba(255, 255, 255, .25);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, .25);
     -webkit-text-fill-color: rgba(0, 0, 0, 0);;
 
 }
@@ -151,7 +151,7 @@
 }
 
 .group1Base{
-  background-color: darkorange;
+  background-color: #989898;
 }
 
 .group2 {
@@ -159,7 +159,7 @@
 }
 
 .group2Back {
-  background-color: darksalmon;
+  background-color: #767676;
 }
 
 .group3 {
@@ -167,7 +167,7 @@
 }
 
 .group3Base{
-  background-color: coral;
+  background-color: #989898;
 }
 
 .group4 {
@@ -175,7 +175,7 @@
 }
 
 .group4Back {
-  background-color: cornflowerblue;
+  background-color: #767676;
 }
 
 .group5{
@@ -183,5 +183,5 @@
 }
 
 .group5Base{
-  background-color: powderblue;
+  background-color: #989898;
 }

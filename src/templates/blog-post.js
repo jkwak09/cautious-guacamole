@@ -31,7 +31,7 @@ export default function BlogPost({ data, pageContext }) {
         </Link>
         }
         <span>
-          |
+          {` | `}
         </span>
         {next === null ? `No more posts.` :
           <Link

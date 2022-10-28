@@ -71,14 +71,15 @@
 
   .plantPostsContainer{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
+    gap: 30px;
   }
 
   .plantPost{
     display: inline-block;
-    flex: 0 0 47%;
+    flex: 0 0 calc(50% - 15px);
   }
 
   .plantPostsContainer{
@@ -99,11 +100,15 @@
 @media only screen and (min-width: 768px) {
 
   .plantPost{
-    flex: 0 0 30%;
+    flex: 0 0 calc(33.3% - 18px);
   }
 
   .plantPostsContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     font-size: medium;
+    gap: 25px;
   }
 
   .plantPostTitle{
@@ -121,7 +126,14 @@
 @media only screen and (min-width: 992px) {
 
 .plantPost{
-  flex: 0 0 23%;
+  flex: 0 0 calc(25% - 19px);
+}
+
+.plantPostsContainer{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 25px;
 }
 
 
@@ -134,6 +146,12 @@
 
   .plantPost{
     width:100%;
+  }
+
+  .plantPostsContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
 }

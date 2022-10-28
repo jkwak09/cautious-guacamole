@@ -71,14 +71,15 @@
 
   .projectPostsContainer{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
+    gap: 30px;
   }
 
   .projectPost{
     display: inline-block;
-    flex: 0 0 47%;
+    flex: 0 0 calc(50% - 15px);
   }
 
   .projectPostsContainer{
@@ -99,11 +100,15 @@
 @media only screen and (min-width: 768px) {
 
   .projectPost{
-    flex: 0 0 30%;
+    flex: 0 0 calc(33.3% - 18px);
   }
 
   .projectPostsContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     font-size: medium;
+    gap: 25px;
   }
 
   .projectPostTitle{
@@ -121,9 +126,16 @@
 @media only screen and (min-width: 992px) {
 
 .projectPost{
-  flex: 0 0 23%;
+  flex: 0 0 calc(25% - 19px);
 }
 
+.projectPostsContainer{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 25px;
+
+}
 
 
 }
@@ -134,6 +146,13 @@
 
   .projectPost{
     width:100%;
+  }
+
+  .projectPostsContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
   }
 
 }

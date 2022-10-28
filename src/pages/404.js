@@ -9,6 +9,7 @@ function NotFound() {
       <>
         <h1>Page Not Found</h1>
         <p>Oops, we couldn't find this page!</p>
+        <p>Why not check out these pages:</p>
       </>
     </Layout>
   )

@@ -20,7 +20,7 @@ function Home({ data }) {
           <RecentPosts />
         </div>
         <div className={homeStyles.homeRecentPosts}>
-          <i>PLACEHOLDER FOR COMING SOON</i>
+          <i>PLACEHOLDER</i>
         </div>
       </>
     </Layout>

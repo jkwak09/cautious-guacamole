@@ -38,7 +38,7 @@ export default function ProjectPost({ data, pageContext }) {
         </Link>
         }
         <span>
-          |
+          {` | `}
         </span>
         {next === null ? `No more projects.` :
           <Link

@@ -40,28 +40,28 @@ function About({ data }) {
               <div class={aboutStyles.pText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
             </div>
             <div class={`${aboutStyles.parallaxBack} ${aboutStyles.group2Back} ${aboutStyles.parallaxLayer}`}>
-              <div class={aboutStyles.pTextBack}>JONATHAN KWAK</div>
+              <div class={aboutStyles.pTextBack}> {data.site.siteMetadata.title}</div>
             </div>
           </div>
 
           <div class={`${aboutStyles.parallaxGroup} ${aboutStyles.group3}`}>
             <div class={`${aboutStyles.parallaxBase} ${aboutStyles.group3Base} ${aboutStyles.parallaxLayer}`}>
-              <div class={aboutStyles.pText}>Group 3 BASE</div>
+              <div class={aboutStyles.pText}>Suspendisse potenti. Cras sagittis ipsum eu tempor aliquet. Etiam ac congue turpis. Curabitur et bibendum odio. Etiam blandit magna sed augue scelerisque convallis.</div>
             </div>
           </div>
 
           <div class={`${aboutStyles.parallaxGroup} ${aboutStyles.group4}`}>
             <div class={`${aboutStyles.parallaxBase} ${aboutStyles.parallaxLayer}`}>
-              <div class={aboutStyles.pText}>GROUP 4 BASE</div>
+              <div class={aboutStyles.pText}> Ut id facilisis enim. Etiam cursus mi quam, et pellentesque magna blandit non. Maecenas vulputate erat nisl, in hendrerit turpis convallis in. Morbi facilisis, nisi a vestibulum dapibus, quam urna pretium urna, quis aliquam nisl libero et metus.</div>
             </div>
             <div class={`${aboutStyles.parallaxBack} ${aboutStyles.group4Back} ${aboutStyles.parallaxLayer}`}>
-              <div class={aboutStyles.pTextBack}>Group 4 BACK</div>
+              <div class={aboutStyles.pTextBack}>TESTING</div>
             </div>
           </div>
 
           <div class={`${aboutStyles.parallaxGroup} ${aboutStyles.group5}`}>
             <div class={`${aboutStyles.parallaxBase} ${aboutStyles.group5Base} ${aboutStyles.parallaxLayer}`}>
-              <div class={aboutStyles.pText}>Group 5 BASE</div>
+              <div class={aboutStyles.pText}>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus sodales vehicula finibus. Suspendisse ultricies pretium rutrum.</div>
             </div>
           </div>
 
