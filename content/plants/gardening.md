@@ -1,6 +1,6 @@
 ---
 path: gardening
-date: 2022-10-28T15:13:42.589Z
+date: 2022-10-27T15:13:42.589Z
 title: Gardening
 posttype: plants
 thumbnail: /assets/4x3-post-image.png
