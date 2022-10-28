@@ -1,6 +1,6 @@
 ---
 path: snake-plant
-date: 2021-01-10T00:55:24.900Z
+date: 2020-09-23T15:18:13.473Z
 title: Snake Plants
 posttype: plants
 thumbnail: /assets/4x3-post-image.png
